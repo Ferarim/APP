@@ -130,5 +130,10 @@ namespace FerarimTournaments.Dashboard
             LoginForm form = new LoginForm();
             form.Show();
         }
+
+        private void HomeForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
