@@ -221,6 +221,7 @@ namespace FerarimTournaments.Dashboard
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(443, 156);
             this.panel1.TabIndex = 2;
+            this.panel1.Click += new System.EventHandler(this.yourTeamPanelClick);
             // 
             // teamLogoPicture
             // 
@@ -230,6 +231,7 @@ namespace FerarimTournaments.Dashboard
             this.teamLogoPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.teamLogoPicture.TabIndex = 7;
             this.teamLogoPicture.TabStop = false;
+            this.teamLogoPicture.Click += new System.EventHandler(this.yourTeamPanelClick);
             // 
             // yourTeamLabel
             // 
@@ -241,6 +243,7 @@ namespace FerarimTournaments.Dashboard
             this.yourTeamLabel.Size = new System.Drawing.Size(305, 37);
             this.yourTeamLabel.TabIndex = 6;
             this.yourTeamLabel.Text = "You\'re not in team";
+            this.yourTeamLabel.Click += new System.EventHandler(this.yourTeamPanelClick);
             // 
             // label1
             // 
@@ -252,6 +255,7 @@ namespace FerarimTournaments.Dashboard
             this.label1.Size = new System.Drawing.Size(177, 37);
             this.label1.TabIndex = 5;
             this.label1.Text = "Your Team:";
+            this.label1.Click += new System.EventHandler(this.yourTeamPanelClick);
             // 
             // timeLabel
             // 
@@ -276,8 +280,10 @@ namespace FerarimTournaments.Dashboard
             this.ClientSize = new System.Drawing.Size(1382, 733);
             this.Controls.Add(this.childFormPanel);
             this.Controls.Add(this.SideBarPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "HomeForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HomePage";
             this.SideBarPanel.ResumeLayout(false);
             this.homePageLogoBtn.ResumeLayout(false);

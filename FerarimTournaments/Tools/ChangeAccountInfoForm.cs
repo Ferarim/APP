@@ -7,14 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FerarimTournaments.Objects;
 
 namespace FerarimTournaments.Tools
 {
     public partial class ChangeAccountInfoForm : Form
     {
-        public ChangeAccountInfoForm()
+        private Account currentAccount;
+        public ChangeAccountInfoForm(Account account)
         {
             InitializeComponent();
+            this.currentAccount = account;
         }
     }
 }
