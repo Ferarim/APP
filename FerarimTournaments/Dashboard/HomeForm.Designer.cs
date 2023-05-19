@@ -233,6 +233,7 @@ namespace FerarimTournaments.Dashboard
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(332, 127);
             this.panel1.TabIndex = 2;
+            this.panel1.Click += new System.EventHandler(this.yourTeamPanelClick);
             // 
             // teamLogoPicture
             // 
@@ -243,6 +244,7 @@ namespace FerarimTournaments.Dashboard
             this.teamLogoPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.teamLogoPicture.TabIndex = 7;
             this.teamLogoPicture.TabStop = false;
+            this.teamLogoPicture.Click += new System.EventHandler(this.yourTeamPanelClick);
             // 
             // yourTeamLabel
             // 
@@ -255,6 +257,7 @@ namespace FerarimTournaments.Dashboard
             this.yourTeamLabel.Size = new System.Drawing.Size(247, 29);
             this.yourTeamLabel.TabIndex = 6;
             this.yourTeamLabel.Text = "You\'re not in team";
+            this.yourTeamLabel.Click += new System.EventHandler(this.yourTeamPanelClick);
             // 
             // label1
             // 
@@ -267,6 +270,7 @@ namespace FerarimTournaments.Dashboard
             this.label1.Size = new System.Drawing.Size(143, 29);
             this.label1.TabIndex = 5;
             this.label1.Text = "Your Team:";
+            this.label1.Click += new System.EventHandler(this.yourTeamPanelClick);
             // 
             // timeLabel
             // 
@@ -292,9 +296,10 @@ namespace FerarimTournaments.Dashboard
             this.ClientSize = new System.Drawing.Size(1036, 596);
             this.Controls.Add(this.childFormPanel);
             this.Controls.Add(this.SideBarPanel);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "HomeForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HomePage";
             this.Load += new System.EventHandler(this.HomeForm_Load);
             this.SideBarPanel.ResumeLayout(false);

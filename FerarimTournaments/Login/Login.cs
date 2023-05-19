@@ -1,10 +1,14 @@
-﻿using System;
+﻿using FerarimTournaments.Dashboard;
+using FerarimTournaments.Logic;
+using FerarimTournaments.Objects;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace FerarimTournaments.Login
 {
@@ -13,12 +17,41 @@ namespace FerarimTournaments.Login
         private Thread fetchThread;
         private readonly object _lock = new object();
      
+        /// <summary>
+        /// Attempts to fetch data from API, if successful, starts ProceedToHome(), 
+        /// else prompts user for another try. 
+        /// </summary>
         private void StartLogin()
         {
             lock (_lock)
             {
-                //pull username and password from loginform
+                string username = LoginForm.ActiveLoginForm.Username.Text;
+                string password = LoginForm.ActiveLoginForm.Password.Text;
+
+                LoginResponse response = APIController.RequestLogin(username, password);
+                if (response == null) throw new Exception("login fetch failed");
+
+                if (response.Success) ProceedToHome(response.Id);
+                else
+                {
+                   //print message to label
+                   //delete password field
+                }
+                
             }
+        }
+
+        /// <summary>
+        /// Requests an account object corresponding to the id passed, then starts HomeForm.
+        /// </summary>
+        private void ProceedToHome(int id)
+        {
+            //pull for account object, start homepage
+            Account currentUser = APIController.GetAccount(id);
+            if (currentUser == null) throw new Exception("account fetch failed");
+
+            LoginForm.ActiveLoginForm.Close();
+            Application.Run(new HomeForm(currentUser));
         }
 
         public void AttemptLog()
@@ -29,9 +62,6 @@ namespace FerarimTournaments.Login
             fetchThread = new Thread(StartLogin);
             fetchThread.Start();          
         }
-
-
-
 
         public static string HashString(string text, string salt = "")
         {

@@ -94,7 +94,7 @@ namespace FerarimTournaments.Dashboard
         private void AccountInfoFormBtn_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.activeButton);
-            OpenChildForm(new AccountInfoForm());
+            OpenChildForm(new AccountInfoForm(currentAccount, this));
         }
 
         private void TeamFormBtn_Click(object sender, EventArgs e)
@@ -131,9 +131,11 @@ namespace FerarimTournaments.Dashboard
             form.Show();
         }
 
-        private void HomeForm_Load(object sender, EventArgs e)
-        {
 
+        public void yourTeamPanelClick(object sender, EventArgs e)
+        {
+            ActivateButton(this.TeamFormBtn, RGBColors.activeButton);
+            OpenChildForm(new TeamForm());
         }
     }
 }

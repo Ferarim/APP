@@ -17,6 +17,7 @@ namespace FerarimTournaments.Login
     {
         private Login login = new Login();
 
+        public static LoginForm ActiveLoginForm;
        
         public LoginForm()
         {
@@ -24,13 +25,23 @@ namespace FerarimTournaments.Login
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
-        {                 
+        {   
+            ActiveLoginForm = this;
         }
 
         private void loginButton1_Click(object sender, EventArgs e)
         {
             login.AttemptLog();
         }
+
+        /// <summary>
+        /// Keeps the reference to this form updated, because the LoginForm gets dropped on every repaint.
+        /// </summary>       
+        private void LoginForm_Paint(object sender, PaintEventArgs e)
+        {
+            ActiveLoginForm = this;
+        }
+
 
         //get set
         public TextBox Username
@@ -43,6 +54,8 @@ namespace FerarimTournaments.Login
             get { return password; }
             set { password = value; }
         }
+
+       
     }
 }
 //dumpster
