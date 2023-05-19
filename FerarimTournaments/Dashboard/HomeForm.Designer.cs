@@ -301,7 +301,6 @@ namespace FerarimTournaments.Dashboard
             this.Name = "HomeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HomePage";
-            this.Load += new System.EventHandler(this.HomeForm_Load);
             this.SideBarPanel.ResumeLayout(false);
             this.homePageLogoBtn.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
