@@ -131,6 +131,7 @@ namespace FerarimTournaments.Dashboard
             form.Show();
         }
 
+
         public void yourTeamPanelClick(object sender, EventArgs e)
         {
             ActivateButton(this.TeamFormBtn, RGBColors.activeButton);
