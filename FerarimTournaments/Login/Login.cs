@@ -31,6 +31,7 @@ namespace FerarimTournaments.Login
                 LoginResponse response = APIController.RequestLogin(username, password);
                 if (response == null) throw new Exception("login fetch failed");
 
+                Console.WriteLine(response.UserRole + " " + response.Message + " " + response.Id + " " + response.Success);
                 if (response.Success) ProceedToHome(response.Id);
                 else
                 {
@@ -54,6 +55,9 @@ namespace FerarimTournaments.Login
             Application.Run(new HomeForm(currentUser));
         }
 
+        /// <summary>
+        /// Starts a new thread that attempts to log user in.
+        /// </summary>
         public void AttemptLog()
         {   
             if(fetchThread != null && fetchThread.ThreadState == ThreadState.Running)

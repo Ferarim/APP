@@ -23,6 +23,7 @@ namespace FerarimTournaments.Logic
 
         public static Account GetAccount(int id)
         {
+            Console.WriteLine(IPADDRESS + "api/v1/accounts/" + id);
             var httpWebRequest = (HttpWebRequest)WebRequest.Create(IPADDRESS + "api/v1/accounts/" + id);
             
             httpWebRequest.ContentType = "application/json";
