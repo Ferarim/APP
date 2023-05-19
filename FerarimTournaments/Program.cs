@@ -17,7 +17,8 @@ namespace FerarimTournaments
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new HomeForm(null));
+            //Application.Run(new HomeForm(null));
+            Application.Run(new Login.LoginForm());
         }
     }
 }
