@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace FerarimTournaments.Login
 {
-    internal class Login
+    public class Login
     {
         private Thread fetchThread;
         private readonly object _lock = new object();
