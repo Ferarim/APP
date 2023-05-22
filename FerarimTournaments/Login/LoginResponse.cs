@@ -14,12 +14,12 @@ namespace FerarimTournaments.Login
         public string Message { get; private set; }
         public int Id { get; private set; }
 
-        public LoginResponse(bool success, string userRole, string message, int id)
+        public LoginResponse(bool success, string role, string message, int userId)
         {
             this.Success = success;
-            this.UserRole = userRole;
+            this.UserRole = role;
             this.Message = message;
-            this.Id = id;
+            this.Id = userId;
         }
     }
 }
