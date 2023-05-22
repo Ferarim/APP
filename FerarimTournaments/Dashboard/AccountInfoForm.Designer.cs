@@ -36,9 +36,9 @@
             this.surnameLabel = new System.Windows.Forms.Label();
             this.roleLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.teamLogoPicture = new System.Windows.Forms.PictureBox();
             this.yourTeamLabel = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.teamLogoPicture = new System.Windows.Forms.PictureBox();
             this.changeAccountInfoBtn = new FerarimTournaments.LoginButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.teamLogoPicture)).BeginInit();
@@ -132,15 +132,6 @@
             this.panel1.TabIndex = 12;
             this.panel1.Click += new System.EventHandler(this.yourTeamClick);
             // 
-            // teamLogoPicture
-            // 
-            this.teamLogoPicture.Location = new System.Drawing.Point(165, 358);
-            this.teamLogoPicture.Name = "teamLogoPicture";
-            this.teamLogoPicture.Size = new System.Drawing.Size(270, 270);
-            this.teamLogoPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.teamLogoPicture.TabIndex = 7;
-            this.teamLogoPicture.TabStop = false;
-            // 
             // yourTeamLabel
             // 
             this.yourTeamLabel.AutoSize = true;
@@ -165,6 +156,15 @@
             this.label5.Text = "Your Team:";
             this.label5.Click += new System.EventHandler(this.yourTeamClick);
             // 
+            // teamLogoPicture
+            // 
+            this.teamLogoPicture.Location = new System.Drawing.Point(165, 358);
+            this.teamLogoPicture.Name = "teamLogoPicture";
+            this.teamLogoPicture.Size = new System.Drawing.Size(270, 270);
+            this.teamLogoPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.teamLogoPicture.TabIndex = 7;
+            this.teamLogoPicture.TabStop = false;
+            // 
             // changeAccountInfoBtn
             // 
             this.changeAccountInfoBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(203)))), ((int)(((byte)(145)))));
@@ -182,8 +182,7 @@
             // 
             // AccountInfoForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(43)))), ((int)(((byte)(84)))));
             this.ClientSize = new System.Drawing.Size(1140, 733);
             this.Controls.Add(this.changeAccountInfoBtn);

@@ -158,6 +158,9 @@
     <EmbeddedResource Include="Dashboard\TeamForm.resx">
       <DependentUpon>TeamForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\TournamentsForm.resx">
+      <DependentUpon>TournamentsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
