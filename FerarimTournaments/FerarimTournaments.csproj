@@ -158,8 +158,14 @@
     <EmbeddedResource Include="Dashboard\TeamForm.resx">
       <DependentUpon>TeamForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\TeammatesForm.resx">
+      <DependentUpon>TeammatesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard\TournamentsForm.resx">
       <DependentUpon>TournamentsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\TournamentsInfoForm.resx">
+      <DependentUpon>TournamentsInfoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -174,6 +180,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Tools\ChangeAccountInfoForm.resx">
+      <DependentUpon>ChangeAccountInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\TeamSettingsForm.resx">
+      <DependentUpon>TeamSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
