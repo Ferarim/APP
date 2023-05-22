@@ -32,7 +32,7 @@ namespace FerarimTournaments.Dashboard
         /// <param name="account"></param>
         public void CheckForAdmin(Account account)
         {
-            if (account.Role != "ROLE_USER")
+            if (account.Role == "ROLE_USER")
             {
                 this.newTournamentBtn.Visible = false;
             }
