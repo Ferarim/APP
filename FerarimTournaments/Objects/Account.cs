@@ -10,7 +10,7 @@ namespace FerarimTournaments.Objects
     public class Account
     {
         private int id;
-        private string userRole;
+        private string role;
         private string userName;
         private string firstName;
         private string lastName;
@@ -20,17 +20,17 @@ namespace FerarimTournaments.Objects
 
         }
 
-        public Account(int id, string userRole, string userName, string firstName, string lastName)
+        public Account(int id, string role, string userName, string firstName, string lastName)
         {
             this.Id = id;
-            this.UserRole = userRole;
+            this.Role = role;
             this.UserName = userName;
             this.FirstName = firstName;
             this.LastName = lastName;
         }
 
         public int Id { get => id; set => id = value; }
-        public string UserRole { get => userRole; set => userRole = value; }
+        public string Role { get => role; set => role = value; }
         public string UserName { get => userName; set => userName = value; }
         public string FirstName { get => firstName; set => firstName = value; }
         public string LastName { get => lastName; set => lastName = value; }
