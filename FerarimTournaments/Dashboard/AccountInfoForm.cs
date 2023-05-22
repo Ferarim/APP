@@ -46,7 +46,7 @@ namespace FerarimTournaments.Dashboard
 
         private void changeAccountInfoBtn_Click(object sender, EventArgs e)
         {
-            ChangeAccountInfoForm form = new ChangeAccountInfoForm(currentAccount);
+            ChangeAccountInfoForm form = new ChangeAccountInfoForm(currentAccount, homeForm);
             homeForm.OpenChildForm(form);
         }
     }
