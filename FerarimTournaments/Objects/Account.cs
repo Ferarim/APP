@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,14 +18,13 @@ namespace FerarimTournaments.Objects
 
         public Account()
         {
-
         }
 
-        public Account(int id, string userRole, string userName, string firstName, string lastName)
+        public Account(int id,  string username, string firstName, string lastName, string role)
         {
             this.Id = id;
-            this.UserRole = userRole;
-            this.UserName = userName;
+            this.UserRole = role;
+            this.UserName = username;
             this.FirstName = firstName;
             this.LastName = lastName;
         }

@@ -12,6 +12,7 @@ using Newtonsoft.Json;
 using FerarimTournaments.Login;
 using FerarimTournaments.Objects;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using System.Net.Http.Headers;
 
 namespace FerarimTournaments.Logic
 {
@@ -37,6 +38,11 @@ namespace FerarimTournaments.Logic
                 try
                 {
                     responseObject = JsonConvert.DeserializeObject<Account>(result);
+                    Console.WriteLine(result);
+                    Console.WriteLine(responseObject.UserName);
+                    Console.WriteLine(responseObject.FirstName);
+                    Console.WriteLine(responseObject.LastName);
+                    Console.WriteLine(responseObject.Id);
                 }
                 catch (Exception e)
                 {
