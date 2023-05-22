@@ -55,7 +55,10 @@ namespace FerarimTournaments.Login
             set { password = value; }
         }
 
-       
+        private void LoginForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
 //dumpster
