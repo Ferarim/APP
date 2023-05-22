@@ -21,7 +21,7 @@ namespace FerarimTournaments.Logic
         private const string IPADDRESS = "http://164.90.173.109:1337/";
 
 
-
+        #region login
         public static Account GetAccount(int id)
         {
             Console.WriteLine(IPADDRESS + "api/v1/accounts/" + id);
@@ -37,12 +37,7 @@ namespace FerarimTournaments.Logic
                 var result = streamReader.ReadToEnd();
                 try
                 {
-                    responseObject = JsonConvert.DeserializeObject<Account>(result);
-                    Console.WriteLine(result);
-                    Console.WriteLine(responseObject.UserName);
-                    Console.WriteLine(responseObject.FirstName);
-                    Console.WriteLine(responseObject.LastName);
-                    Console.WriteLine(responseObject.Id);
+                    responseObject = JsonConvert.DeserializeObject<Account>(result);                    
                 }
                 catch (Exception e)
                 {
@@ -82,5 +77,13 @@ namespace FerarimTournaments.Logic
             }
             return responseObject;
         }
+        #endregion
+
+        #region register
+        //public static string 
+
+
+
+        #endregion
     }
 }

@@ -59,6 +59,16 @@ namespace FerarimTournaments.Login
         {
             Application.Exit();
         }
+
+        private void loginButton_Click(object sender, EventArgs e)
+        {
+            login.AttemptLog();
+        }
+
+        private void registerButton_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
 //dumpster

@@ -27,18 +27,17 @@ namespace FerarimTournaments.Login
             {
                 string username = LoginForm.ActiveLoginForm.Username.Text;
                 string password = LoginForm.ActiveLoginForm.Password.Text;
-
+                                                                            //HashString(password)
                 LoginResponse response = APIController.RequestLogin(username, password);
                 if (response == null) throw new Exception("login fetch failed");
 
-                Console.WriteLine(response.role + " " + response.Message + " " + response.Id + " " + response.Success);
                 if (response.Success) ProceedToHome(response.Id);
                 else
                 {
-                   //print message to label
-                   //delete password field
-                }
-                
+                    //print message to label
+                    //delete password field
+                    LoginForm.ActiveLoginForm.Password.Text = "";
+                }               
             }
         }
 

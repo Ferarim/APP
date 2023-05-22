@@ -122,6 +122,7 @@
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Login\LoginResponse.cs" />
+    <Compile Include="Login\Register.cs" />
     <Compile Include="Objects\Account.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
