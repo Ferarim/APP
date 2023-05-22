@@ -32,7 +32,7 @@
             this.password = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.username = new System.Windows.Forms.TextBox();
-            this.loginButton2 = new FerarimTournaments.LoginButton();
+            this.registerButton = new FerarimTournaments.LoginButton();
             this.loginButton = new FerarimTournaments.LoginButton();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -61,7 +61,7 @@
             this.password.Location = new System.Drawing.Point(13, 12);
             this.password.Margin = new System.Windows.Forms.Padding(4);
             this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(441, 23);
+            this.password.Size = new System.Drawing.Size(441, 19);
             this.password.TabIndex = 1;
             // 
             // panel1
@@ -87,23 +87,24 @@
             this.username.Location = new System.Drawing.Point(13, 12);
             this.username.Margin = new System.Windows.Forms.Padding(4);
             this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(441, 23);
+            this.username.Size = new System.Drawing.Size(441, 19);
             this.username.TabIndex = 0;
             // 
-            // loginButton2
+            // registerButton
             // 
-            this.loginButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(203)))), ((int)(((byte)(145)))));
-            this.loginButton2.FlatAppearance.BorderSize = 0;
-            this.loginButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.loginButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginButton2.ForeColor = System.Drawing.Color.White;
-            this.loginButton2.Location = new System.Drawing.Point(133, 400);
-            this.loginButton2.Margin = new System.Windows.Forms.Padding(4);
-            this.loginButton2.Name = "loginButton2";
-            this.loginButton2.Size = new System.Drawing.Size(200, 49);
-            this.loginButton2.TabIndex = 3;
-            this.loginButton2.Text = "Register";
-            this.loginButton2.UseVisualStyleBackColor = false;
+            this.registerButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(203)))), ((int)(((byte)(145)))));
+            this.registerButton.FlatAppearance.BorderSize = 0;
+            this.registerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.registerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.registerButton.ForeColor = System.Drawing.Color.White;
+            this.registerButton.Location = new System.Drawing.Point(133, 400);
+            this.registerButton.Margin = new System.Windows.Forms.Padding(4);
+            this.registerButton.Name = "registerButton";
+            this.registerButton.Size = new System.Drawing.Size(200, 49);
+            this.registerButton.TabIndex = 3;
+            this.registerButton.Text = "Register";
+            this.registerButton.UseVisualStyleBackColor = false;
+            this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
             // 
             // loginButton
             // 
@@ -119,14 +120,14 @@
             this.loginButton.TabIndex = 2;
             this.loginButton.Text = "Login";
             this.loginButton.UseVisualStyleBackColor = false;
-            this.loginButton.Click += new System.EventHandler(this.loginButton1_Click);
+            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
             // LoginForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(172)))), ((int)(((byte)(189)))));
-            this.ClientSize = new System.Drawing.Size(1045, 506);
-            this.Controls.Add(this.loginButton2);
+            this.ClientSize = new System.Drawing.Size(734, 506);
+            this.Controls.Add(this.registerButton);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
@@ -138,8 +139,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.LoginForm_FormClosed);
-            this.Load += new System.EventHandler(this.LoginForm_Load);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.LoginForm_Paint);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -155,6 +154,6 @@
         private System.Windows.Forms.TextBox username;
         private System.Windows.Forms.TextBox password;
         private LoginButton loginButton;
-        private LoginButton loginButton2;
+        private LoginButton registerButton;
     }
 }

@@ -21,7 +21,7 @@ namespace FerarimTournaments.Logic
         private const string IPADDRESS = "http://164.90.173.109:1337/";
 
 
-
+        #region login
         public static Account GetAccount(int id)
         {
             Console.WriteLine(IPADDRESS + "api/v1/accounts/" + id);
@@ -37,12 +37,7 @@ namespace FerarimTournaments.Logic
                 var result = streamReader.ReadToEnd();
                 try
                 {
-                    responseObject = JsonConvert.DeserializeObject<Account>(result);
-                    Console.WriteLine(result);
-                    Console.WriteLine(responseObject.UserName);
-                    Console.WriteLine(responseObject.FirstName);
-                    Console.WriteLine(responseObject.LastName);
-                    Console.WriteLine(responseObject.Id);
+                    responseObject = JsonConvert.DeserializeObject<Account>(result);                    
                 }
                 catch (Exception e)
                 {
@@ -82,5 +77,49 @@ namespace FerarimTournaments.Logic
             }
             return responseObject;
         }
+        #endregion
+
+        #region register
+        public static void RequestRegister(string username, string firstname, string lastname, string password)
+        {
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create(IPADDRESS + "api/v1/accounts/");
+            Console.WriteLine(IPADDRESS + "api/v1/accounts/");
+            httpWebRequest.ContentType = "application/json";
+            httpWebRequest.Method = "POST";
+
+            using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
+            {
+                /*string json = "{\r\n\t\"username\":\"" + username +
+                    "\",\r\n\t\"firstName\":\"" + firstname +
+                    "\",\r\n\t\"lastName\":\"" + lastname +
+                    "\",\r\n\t\"password\":\"" + password + "\"\r\n}";*/
+                string json = "{\r\n\t\"username\":\"" + "burak" +
+                    "\",\r\n\t\"firstName\":\"" + "Jan" +
+                    "\",\r\n\t\"lastName\":\"" + "Novak" +
+                    "\",\r\n\t\"password\":\"" + "admin" + "\"\r\n}";
+                Console.WriteLine(json);
+
+
+                streamWriter.Write(json);
+            }
+
+            var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+
+            using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+            {
+                var result = streamReader.ReadToEnd();
+                try
+                {
+                    //responseObject = JsonConvert.DeserializeObject<LoginResponse>(result);
+                    Console.WriteLine(result);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+            }
+        }
+
+        #endregion
     }
 }
