@@ -31,7 +31,7 @@ namespace FerarimTournaments.Login
                 LoginResponse response = APIController.RequestLogin(username, password);
                 if (response == null) throw new Exception("login fetch failed");
 
-                Console.WriteLine(response.UserRole + " " + response.Message + " " + response.Id + " " + response.Success);
+                Console.WriteLine(response.role + " " + response.Message + " " + response.Id + " " + response.Success);
                 if (response.Success) ProceedToHome(response.Id);
                 else
                 {
@@ -51,7 +51,8 @@ namespace FerarimTournaments.Login
             Account currentUser = APIController.GetAccount(id);
             if (currentUser == null) throw new Exception("account fetch failed");
 
-            LoginForm.ActiveLoginForm.Close();
+            Action closeForm = delegate { LoginForm.ActiveLoginForm.Close(); };
+            LoginForm.ActiveLoginForm.Invoke(closeForm);
             Application.Run(new HomeForm(currentUser));
         }
 

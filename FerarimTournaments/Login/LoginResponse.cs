@@ -10,16 +10,16 @@ namespace FerarimTournaments.Login
     {
 
         public bool Success { get; private set; }
-        public string UserRole { get; private set; }
+        public string role { get; private set; }
         public string Message { get; private set; }
         public int Id { get; private set; }
 
-        public LoginResponse(bool success, string userRole, string message, int id)
+        public LoginResponse(bool success, string role, string message, int userId)
         {
             this.Success = success;
-            this.UserRole = userRole;
+            this.role = role;
             this.Message = message;
-            this.Id = id;
+            this.Id = userId;
         }
     }
 }

@@ -44,7 +44,7 @@
             this.panel2.Controls.Add(this.password);
             this.panel2.Location = new System.Drawing.Point(100, 200);
             this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.panel2.Padding = new System.Windows.Forms.Padding(10);
             this.panel2.Size = new System.Drawing.Size(350, 40);
             this.panel2.TabIndex = 1;
             // 
@@ -68,7 +68,7 @@
             this.panel1.Controls.Add(this.username);
             this.panel1.Location = new System.Drawing.Point(100, 50);
             this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.panel1.Padding = new System.Windows.Forms.Padding(10);
             this.panel1.Size = new System.Drawing.Size(350, 40);
             this.panel1.TabIndex = 0;
             // 
@@ -127,7 +127,7 @@
             this.Controls.Add(this.panel2);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
