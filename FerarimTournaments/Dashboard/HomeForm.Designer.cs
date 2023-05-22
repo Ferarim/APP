@@ -32,7 +32,6 @@ namespace FerarimTournaments.Dashboard
         {
             this.components = new System.ComponentModel.Container();
             this.SideBarPanel = new System.Windows.Forms.Panel();
-            this.logoutBtn = new FerarimTournaments.LoginButton();
             this.homePageLogoBtn = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TournamentsFormBtn = new FontAwesome.Sharp.IconButton();
@@ -48,6 +47,7 @@ namespace FerarimTournaments.Dashboard
             this.label1 = new System.Windows.Forms.Label();
             this.timeLabel = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.logoutBtn = new FerarimTournaments.LoginButton();
             this.SideBarPanel.SuspendLayout();
             this.homePageLogoBtn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -70,22 +70,6 @@ namespace FerarimTournaments.Dashboard
             this.SideBarPanel.Name = "SideBarPanel";
             this.SideBarPanel.Size = new System.Drawing.Size(243, 736);
             this.SideBarPanel.TabIndex = 0;
-            // 
-            // logoutBtn
-            // 
-            this.logoutBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(161)))), ((int)(((byte)(166)))));
-            this.logoutBtn.FlatAppearance.BorderSize = 0;
-            this.logoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.logoutBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
-            this.logoutBtn.ForeColor = System.Drawing.Color.White;
-            this.logoutBtn.Location = new System.Drawing.Point(43, 671);
-            this.logoutBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.logoutBtn.Name = "logoutBtn";
-            this.logoutBtn.Size = new System.Drawing.Size(149, 39);
-            this.logoutBtn.TabIndex = 4;
-            this.logoutBtn.Text = "Logout";
-            this.logoutBtn.UseVisualStyleBackColor = false;
-            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
             // 
             // homePageLogoBtn
             // 
@@ -284,10 +268,25 @@ namespace FerarimTournaments.Dashboard
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // logoutBtn
+            // 
+            this.logoutBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(161)))), ((int)(((byte)(166)))));
+            this.logoutBtn.FlatAppearance.BorderSize = 0;
+            this.logoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logoutBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
+            this.logoutBtn.ForeColor = System.Drawing.Color.White;
+            this.logoutBtn.Location = new System.Drawing.Point(43, 671);
+            this.logoutBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.logoutBtn.Name = "logoutBtn";
+            this.logoutBtn.Size = new System.Drawing.Size(149, 39);
+            this.logoutBtn.TabIndex = 4;
+            this.logoutBtn.Text = "Logout";
+            this.logoutBtn.UseVisualStyleBackColor = false;
+            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
+            // 
             // HomeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(43)))), ((int)(((byte)(84)))));
             this.ClientSize = new System.Drawing.Size(1381, 734);
             this.Controls.Add(this.childFormPanel);
