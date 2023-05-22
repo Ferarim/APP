@@ -137,5 +137,10 @@ namespace FerarimTournaments.Dashboard
             ActivateButton(this.TeamFormBtn, RGBColors.activeButton);
             OpenChildForm(new TeamForm());
         }
+
+        private void HomeForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

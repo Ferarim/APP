@@ -66,9 +66,9 @@ namespace FerarimTournaments.Dashboard
             this.SideBarPanel.Controls.Add(this.TeamFormBtn);
             this.SideBarPanel.Controls.Add(this.AccountInfoFormBtn);
             this.SideBarPanel.Location = new System.Drawing.Point(0, 0);
-            this.SideBarPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SideBarPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SideBarPanel.Name = "SideBarPanel";
-            this.SideBarPanel.Size = new System.Drawing.Size(182, 598);
+            this.SideBarPanel.Size = new System.Drawing.Size(243, 736);
             this.SideBarPanel.TabIndex = 0;
             // 
             // logoutBtn
@@ -78,10 +78,10 @@ namespace FerarimTournaments.Dashboard
             this.logoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.logoutBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.logoutBtn.ForeColor = System.Drawing.Color.White;
-            this.logoutBtn.Location = new System.Drawing.Point(32, 545);
-            this.logoutBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.logoutBtn.Location = new System.Drawing.Point(43, 671);
+            this.logoutBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.logoutBtn.Name = "logoutBtn";
-            this.logoutBtn.Size = new System.Drawing.Size(112, 32);
+            this.logoutBtn.Size = new System.Drawing.Size(149, 39);
             this.logoutBtn.TabIndex = 4;
             this.logoutBtn.Text = "Logout";
             this.logoutBtn.UseVisualStyleBackColor = false;
@@ -91,9 +91,9 @@ namespace FerarimTournaments.Dashboard
             // 
             this.homePageLogoBtn.Controls.Add(this.pictureBox1);
             this.homePageLogoBtn.Location = new System.Drawing.Point(0, 0);
-            this.homePageLogoBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.homePageLogoBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.homePageLogoBtn.Name = "homePageLogoBtn";
-            this.homePageLogoBtn.Size = new System.Drawing.Size(182, 117);
+            this.homePageLogoBtn.Size = new System.Drawing.Size(243, 144);
             this.homePageLogoBtn.TabIndex = 0;
             this.homePageLogoBtn.Click += new System.EventHandler(this.homePageLogoBtn_Click);
             // 
@@ -101,10 +101,10 @@ namespace FerarimTournaments.Dashboard
             // 
             this.pictureBox1.Image = global::FerarimTournaments.Properties.Resources.logo;
             this.pictureBox1.InitialImage = global::FerarimTournaments.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(36, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(48, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(108, 117);
+            this.pictureBox1.Size = new System.Drawing.Size(144, 144);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -122,10 +122,10 @@ namespace FerarimTournaments.Dashboard
             this.TournamentsFormBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(161)))), ((int)(((byte)(166)))));
             this.TournamentsFormBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.TournamentsFormBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.TournamentsFormBtn.Location = new System.Drawing.Point(4, 262);
-            this.TournamentsFormBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TournamentsFormBtn.Location = new System.Drawing.Point(5, 322);
+            this.TournamentsFormBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TournamentsFormBtn.Name = "TournamentsFormBtn";
-            this.TournamentsFormBtn.Size = new System.Drawing.Size(177, 61);
+            this.TournamentsFormBtn.Size = new System.Drawing.Size(236, 75);
             this.TournamentsFormBtn.TabIndex = 3;
             this.TournamentsFormBtn.Text = "Tournaments";
             this.TournamentsFormBtn.UseVisualStyleBackColor = false;
@@ -143,10 +143,10 @@ namespace FerarimTournaments.Dashboard
             this.TeamFormBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(161)))), ((int)(((byte)(166)))));
             this.TeamFormBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.TeamFormBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.TeamFormBtn.Location = new System.Drawing.Point(2, 188);
-            this.TeamFormBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TeamFormBtn.Location = new System.Drawing.Point(3, 231);
+            this.TeamFormBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TeamFormBtn.Name = "TeamFormBtn";
-            this.TeamFormBtn.Size = new System.Drawing.Size(177, 61);
+            this.TeamFormBtn.Size = new System.Drawing.Size(236, 75);
             this.TeamFormBtn.TabIndex = 2;
             this.TeamFormBtn.Text = "Team";
             this.TeamFormBtn.UseVisualStyleBackColor = false;
@@ -164,10 +164,10 @@ namespace FerarimTournaments.Dashboard
             this.AccountInfoFormBtn.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(161)))), ((int)(((byte)(166)))));
             this.AccountInfoFormBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.AccountInfoFormBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AccountInfoFormBtn.Location = new System.Drawing.Point(2, 122);
-            this.AccountInfoFormBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AccountInfoFormBtn.Location = new System.Drawing.Point(3, 150);
+            this.AccountInfoFormBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AccountInfoFormBtn.Name = "AccountInfoFormBtn";
-            this.AccountInfoFormBtn.Size = new System.Drawing.Size(177, 61);
+            this.AccountInfoFormBtn.Size = new System.Drawing.Size(236, 75);
             this.AccountInfoFormBtn.TabIndex = 1;
             this.AccountInfoFormBtn.Text = "Account Information";
             this.AccountInfoFormBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -181,10 +181,10 @@ namespace FerarimTournaments.Dashboard
             this.childFormPanel.Controls.Add(this.panel2);
             this.childFormPanel.Controls.Add(this.panel1);
             this.childFormPanel.Controls.Add(this.timeLabel);
-            this.childFormPanel.Location = new System.Drawing.Point(182, 0);
-            this.childFormPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.childFormPanel.Location = new System.Drawing.Point(243, 0);
+            this.childFormPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.childFormPanel.Name = "childFormPanel";
-            this.childFormPanel.Size = new System.Drawing.Size(854, 596);
+            this.childFormPanel.Size = new System.Drawing.Size(1139, 734);
             this.childFormPanel.TabIndex = 1;
             // 
             // upcomingTournamentsFlowPanel
@@ -192,10 +192,10 @@ namespace FerarimTournaments.Dashboard
             this.upcomingTournamentsFlowPanel.AutoScroll = true;
             this.upcomingTournamentsFlowPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(43)))), ((int)(((byte)(74)))));
             this.upcomingTournamentsFlowPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.upcomingTournamentsFlowPanel.Location = new System.Drawing.Point(403, 122);
-            this.upcomingTournamentsFlowPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.upcomingTournamentsFlowPanel.Location = new System.Drawing.Point(537, 150);
+            this.upcomingTournamentsFlowPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.upcomingTournamentsFlowPanel.Name = "upcomingTournamentsFlowPanel";
-            this.upcomingTournamentsFlowPanel.Size = new System.Drawing.Size(422, 362);
+            this.upcomingTournamentsFlowPanel.Size = new System.Drawing.Size(563, 446);
             this.upcomingTournamentsFlowPanel.TabIndex = 6;
             // 
             // panel2
@@ -203,10 +203,10 @@ namespace FerarimTournaments.Dashboard
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(43)))), ((int)(((byte)(74)))));
             this.panel2.Controls.Add(this.label4);
             this.panel2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel2.Location = new System.Drawing.Point(403, 81);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Location = new System.Drawing.Point(537, 100);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(422, 39);
+            this.panel2.Size = new System.Drawing.Size(563, 48);
             this.panel2.TabIndex = 5;
             // 
             // label4
@@ -214,10 +214,9 @@ namespace FerarimTournaments.Dashboard
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Cascadia Mono", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(243)))), ((int)(((byte)(145)))));
-            this.label4.Location = new System.Drawing.Point(2, 0);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(3, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(286, 29);
+            this.label4.Size = new System.Drawing.Size(353, 37);
             this.label4.TabIndex = 5;
             this.label4.Text = "Upcoming Tournaments:";
             // 
@@ -228,19 +227,19 @@ namespace FerarimTournaments.Dashboard
             this.panel1.Controls.Add(this.yourTeamLabel);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel1.Location = new System.Drawing.Point(10, 81);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(13, 100);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(332, 127);
+            this.panel1.Size = new System.Drawing.Size(443, 156);
             this.panel1.TabIndex = 2;
             this.panel1.Click += new System.EventHandler(this.yourTeamPanelClick);
             // 
             // teamLogoPicture
             // 
-            this.teamLogoPicture.Location = new System.Drawing.Point(8, 32);
-            this.teamLogoPicture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.teamLogoPicture.Location = new System.Drawing.Point(11, 39);
+            this.teamLogoPicture.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.teamLogoPicture.Name = "teamLogoPicture";
-            this.teamLogoPicture.Size = new System.Drawing.Size(60, 65);
+            this.teamLogoPicture.Size = new System.Drawing.Size(80, 80);
             this.teamLogoPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.teamLogoPicture.TabIndex = 7;
             this.teamLogoPicture.TabStop = false;
@@ -251,10 +250,9 @@ namespace FerarimTournaments.Dashboard
             this.yourTeamLabel.AutoSize = true;
             this.yourTeamLabel.Font = new System.Drawing.Font("Cascadia Mono", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.yourTeamLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(243)))), ((int)(((byte)(145)))));
-            this.yourTeamLabel.Location = new System.Drawing.Point(73, 51);
-            this.yourTeamLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.yourTeamLabel.Location = new System.Drawing.Point(97, 63);
             this.yourTeamLabel.Name = "yourTeamLabel";
-            this.yourTeamLabel.Size = new System.Drawing.Size(247, 29);
+            this.yourTeamLabel.Size = new System.Drawing.Size(305, 37);
             this.yourTeamLabel.TabIndex = 6;
             this.yourTeamLabel.Text = "You\'re not in team";
             this.yourTeamLabel.Click += new System.EventHandler(this.yourTeamPanelClick);
@@ -264,10 +262,9 @@ namespace FerarimTournaments.Dashboard
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cascadia Mono", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(243)))), ((int)(((byte)(145)))));
-            this.label1.Location = new System.Drawing.Point(2, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 29);
+            this.label1.Size = new System.Drawing.Size(177, 37);
             this.label1.TabIndex = 5;
             this.label1.Text = "Your Team:";
             this.label1.Click += new System.EventHandler(this.yourTeamPanelClick);
@@ -277,10 +274,9 @@ namespace FerarimTournaments.Dashboard
             this.timeLabel.AutoSize = true;
             this.timeLabel.Font = new System.Drawing.Font("Cascadia Mono", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(243)))), ((int)(((byte)(145)))));
-            this.timeLabel.Location = new System.Drawing.Point(4, 7);
-            this.timeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.timeLabel.Location = new System.Drawing.Point(5, 9);
             this.timeLabel.Name = "timeLabel";
-            this.timeLabel.Size = new System.Drawing.Size(104, 29);
+            this.timeLabel.Size = new System.Drawing.Size(129, 37);
             this.timeLabel.TabIndex = 4;
             this.timeLabel.Text = "Ferarim";
             // 
@@ -290,17 +286,19 @@ namespace FerarimTournaments.Dashboard
             // 
             // HomeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(43)))), ((int)(((byte)(84)))));
-            this.ClientSize = new System.Drawing.Size(1036, 596);
+            this.ClientSize = new System.Drawing.Size(1381, 734);
             this.Controls.Add(this.childFormPanel);
             this.Controls.Add(this.SideBarPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "HomeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HomePage";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.HomeForm_FormClosed);
             this.SideBarPanel.ResumeLayout(false);
             this.homePageLogoBtn.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
