@@ -39,7 +39,7 @@ namespace FerarimTournaments.Login
             {
                 //LoginResponse response = APIController.RequestRegister(Username, Password);
                 //if (response == null) throw new Exception("register fetch failed");
-
+                APIController.RequestRegister(Username, FirstName, LastName, Password);
                 //if (response.Success) ProceedToHome(response.Id);
                 //else
                 {

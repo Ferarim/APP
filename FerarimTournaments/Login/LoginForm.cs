@@ -16,32 +16,14 @@ namespace FerarimTournaments.Login
     public partial class LoginForm : Form
     {
         private Login login = new Login();
-
-        public static LoginForm ActiveLoginForm;
        
+        RegisterForm currentRegisterForm;
+
         public LoginForm()
         {
             InitializeComponent();
         }
-
-        private void LoginForm_Load(object sender, EventArgs e)
-        {   
-            ActiveLoginForm = this;
-        }
-
-        private void loginButton1_Click(object sender, EventArgs e)
-        {
-            login.AttemptLog();
-        }
-
-        /// <summary>
-        /// Keeps the reference to this form updated, because the LoginForm gets dropped on every repaint.
-        /// </summary>       
-        private void LoginForm_Paint(object sender, PaintEventArgs e)
-        {
-            ActiveLoginForm = this;
-        }
-
+     
 
         //get set
         public TextBox Username
@@ -62,13 +44,26 @@ namespace FerarimTournaments.Login
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            login.AttemptLog();
+            login.AttemptLog(this);
         }
 
         private void registerButton_Click(object sender, EventArgs e)
         {
-            
+            RegisterForm registerForm;
+            if (currentRegisterForm != null)
+                registerForm = currentRegisterForm;
+            else registerForm = new RegisterForm(this);
+
+            currentRegisterForm = registerForm;
+            registerForm.TopLevel = false;
+            registerForm.FormBorderStyle = FormBorderStyle.None;
+            registerForm.Dock = DockStyle.Fill;
+
+            Controls.Add(registerForm);
+            registerForm.BringToFront();
+            registerForm.Show();           
         }
+       
     }
 }
 //dumpster
