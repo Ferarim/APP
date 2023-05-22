@@ -66,7 +66,7 @@ namespace FerarimTournaments.Logic
                 var result = streamReader.ReadToEnd();
                 try
                 {
-                    responseObject = JsonConvert.DeserializeObject<LoginResponse>(result);
+                    responseObject = JsonConvert.DeserializeObject<LoginResponse>(result);                    
                 }
                 catch(Exception e)
                 {

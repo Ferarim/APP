@@ -50,7 +50,8 @@ namespace FerarimTournaments.Login
             Account currentUser = APIController.GetAccount(id);
             if (currentUser == null) throw new Exception("account fetch failed");
 
-            LoginForm.ActiveLoginForm.Close();
+            Action closeForm = delegate { LoginForm.ActiveLoginForm.Close(); };
+            LoginForm.ActiveLoginForm.Invoke(closeForm);
             Application.Run(new HomeForm(currentUser));
         }
 
