@@ -22,7 +22,7 @@ namespace FerarimTournaments.Dashboard
             InitializeComponent();
             this.currentAccount = account;
             this.homeForm = homeForm;
-            //InitItems();
+            InitItems();
             //InitTeamInfo();
         }
 
@@ -30,7 +30,7 @@ namespace FerarimTournaments.Dashboard
         {
             this.nameLabel.Text = currentAccount.FirstName;
             this.surnameLabel.Text = currentAccount.LastName;
-            this.roleLabel.Text = currentAccount.UserRole;
+            this.roleLabel.Text = currentAccount.Role;
         }
 
         public void InitTeamInfo()
