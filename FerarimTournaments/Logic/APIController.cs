@@ -22,14 +22,15 @@ namespace FerarimTournaments.Logic
 
 
         #region login
-        public static Account GetAccount(int id)
+        public static Account GetAccount(int id, string username, string password)
         {
             Console.WriteLine(IPADDRESS + "api/v1/accounts/" + id);
             var httpWebRequest = (HttpWebRequest)WebRequest.Create(IPADDRESS + "api/v1/accounts/" + id);
             
             httpWebRequest.ContentType = "application/json";
             httpWebRequest.Method = "GET";
-          
+            httpWebRequest.Headers.Add("Credentials", username+":"+password);
+
             var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
             Account responseObject = null;
             using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
@@ -59,6 +60,7 @@ namespace FerarimTournaments.Logic
                 string json = "{\r\n\t\"name\":\""+username+"\",\r\n\t\"password\":\""+password+"\"\r\n}";
 
                 streamWriter.Write(json);
+                Console.WriteLine(json);
             }
 
             var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
@@ -82,7 +84,7 @@ namespace FerarimTournaments.Logic
         #region register
         public static void RequestRegister(string username, string firstname, string lastname, string password)
         {
-            var httpWebRequest = (HttpWebRequest)WebRequest.Create(IPADDRESS + "api/v1/accounts/");
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create(IPADDRESS + "api/v1/accounts");
             Console.WriteLine(IPADDRESS + "api/v1/accounts/");
             httpWebRequest.ContentType = "application/json";
             httpWebRequest.Method = "POST";
@@ -102,7 +104,6 @@ namespace FerarimTournaments.Logic
 
                 streamWriter.Write(json);
             }
-
             var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
 
             using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
