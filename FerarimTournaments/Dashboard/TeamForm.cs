@@ -14,9 +14,11 @@ namespace FerarimTournaments.Dashboard
     public partial class TeamForm : Form
     {
         private Account accountInstance;  
-        public TeamForm()
+        public TeamForm(Account account)
         {
             InitializeComponent();
+            this.accountInstance = account;
+            TeamCheck();
             AdminCheck();
         }
 

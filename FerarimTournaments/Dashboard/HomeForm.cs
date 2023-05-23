@@ -100,7 +100,7 @@ namespace FerarimTournaments.Dashboard
         private void TeamFormBtn_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.activeButton);
-            OpenChildForm(new TeamForm());
+            OpenChildForm(new TeamForm(currentAccount));
         }
 
         private void TournamentsFormBtn_Click(object sender, EventArgs e)
