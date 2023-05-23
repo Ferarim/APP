@@ -21,9 +21,16 @@ namespace FerarimTournaments.Controls
             InitializeComponent();
             this.tournamentInstance = tournament;
             this.homeForm = homeForm;
+            InitItems();
         }
 
         public Tournament TournamentInstance { get => tournamentInstance; set => tournamentInstance = value; }
+
+        public void InitItems()
+        {
+            this.dateLabel.Text = tournamentInstance.Date.ToString();
+            this.team1VSteam2Label.Text = tournamentInstance.Team1+" VS "+tournamentInstance.Team2;
+        }
 
         private void TournamentControl_Click(object sender, EventArgs e)
         {
