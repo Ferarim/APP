@@ -66,8 +66,9 @@
             this.username.ForeColor = System.Drawing.SystemColors.Window;
             this.username.Location = new System.Drawing.Point(13, 12);
             this.username.Margin = new System.Windows.Forms.Padding(4);
+            this.username.Multiline = true;
             this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(424, 19);
+            this.username.Size = new System.Drawing.Size(424, 25);
             this.username.TabIndex = 0;
             // 
             // panel2
@@ -92,8 +93,9 @@
             this.firstName.ForeColor = System.Drawing.SystemColors.Window;
             this.firstName.Location = new System.Drawing.Point(13, 12);
             this.firstName.Margin = new System.Windows.Forms.Padding(4);
+            this.firstName.Multiline = true;
             this.firstName.Name = "firstName";
-            this.firstName.Size = new System.Drawing.Size(424, 19);
+            this.firstName.Size = new System.Drawing.Size(424, 25);
             this.firstName.TabIndex = 0;
             // 
             // panel3
@@ -118,8 +120,9 @@
             this.lastName.ForeColor = System.Drawing.SystemColors.Window;
             this.lastName.Location = new System.Drawing.Point(13, 12);
             this.lastName.Margin = new System.Windows.Forms.Padding(4);
+            this.lastName.Multiline = true;
             this.lastName.Name = "lastName";
-            this.lastName.Size = new System.Drawing.Size(424, 19);
+            this.lastName.Size = new System.Drawing.Size(424, 25);
             this.lastName.TabIndex = 0;
             // 
             // panel4
@@ -144,8 +147,9 @@
             this.password.ForeColor = System.Drawing.SystemColors.Window;
             this.password.Location = new System.Drawing.Point(13, 12);
             this.password.Margin = new System.Windows.Forms.Padding(4);
+            this.password.Multiline = true;
             this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(424, 19);
+            this.password.Size = new System.Drawing.Size(424, 25);
             this.password.TabIndex = 0;
             // 
             // loginButton
