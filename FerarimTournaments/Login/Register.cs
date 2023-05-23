@@ -12,6 +12,7 @@ namespace FerarimTournaments.Login
     internal class Register
     {
         private Thread fetchThread;
+        private LoginForm form;
         private readonly object _lock = new object();
 
         public string Username { get; private set; }
@@ -19,12 +20,13 @@ namespace FerarimTournaments.Login
         public string LastName { get; private set; }
         public string Password { get; private set; }
 
-        public void AttemptRegister(string username, string firstname, string lastname, string password)
+        public void AttemptRegister(LoginForm form, string username, string firstname, string lastname, string password)
         {
+            this.form = form;
             Username = username;
             FirstName = firstname;
             LastName = lastname;
-            Password = Login.HashString(password);
+            Password = password;
 
             if (fetchThread != null && fetchThread.ThreadState == ThreadState.Running)
                 fetchThread.Abort();
@@ -36,16 +38,15 @@ namespace FerarimTournaments.Login
         public void StartRegister()
         {
             lock (_lock)
-            {
-                //LoginResponse response = APIController.RequestRegister(Username, Password);
-                //if (response == null) throw new Exception("register fetch failed");
-                APIController.RequestRegister(Username, FirstName, LastName, Password);
-                //if (response.Success) ProceedToHome(response.Id);
-                //else
+            {               
+                if(!APIController.RequestRegister(Username, FirstName, LastName, Password))
                 {
-                    //print message to label
-                    //delete password field
+                    Console.WriteLine("error happened");
+                    //print error mb
+                    return;
                 }
+                Action returnToLogin = delegate { form.BringToFront(); };
+                form.Invoke(returnToLogin);
             }
         }
     }
