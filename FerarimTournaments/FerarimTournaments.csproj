@@ -160,14 +160,6 @@
     <EmbeddedResource Include="Controls\AccountControl.resx">
       <DependentUpon>AccountControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\TournamentControl.resx">
-      <DependentUpon>TournamentControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Objects\Tournament.cs" />
-    <EmbeddedResource Include="Controls\TournamentControl.cs">
-      <SubType>UserControl</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controls\TournamentControl.Designer.cs" />
     <EmbeddedResource Include="Dashboard\AccountInfoForm.resx">
       <DependentUpon>AccountInfoForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -214,7 +206,6 @@
     <EmbeddedResource Include="Tools\TeamSettingsForm.resx">
       <DependentUpon>TeamSettingsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TournamentControl.resx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
