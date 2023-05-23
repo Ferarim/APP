@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FerarimTournaments.Dashboard;
+using FerarimTournaments.Objects;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,21 @@ namespace FerarimTournaments.Controls
 {
     public partial class TournamentControl : UserControl
     {
-        public TournamentControl()
+        private Tournament tournamentInstance;
+        private HomeForm homeForm;
+        public TournamentControl(Tournament tournament, HomeForm homeForm)
         {
             InitializeComponent();
+            this.tournamentInstance = tournament;
+            this.homeForm= homeForm;
+        }
+
+        public Tournament TournamentInstance { get => tournamentInstance; set => tournamentInstance = value; }
+
+        private void TournamentControl_Click(object sender, EventArgs e)
+        {
+            TournamentsInfoForm form = new TournamentsInfoForm(tournamentInstance);
+            homeForm.OpenChildForm(form);
         }
     }
 }

@@ -106,7 +106,7 @@ namespace FerarimTournaments.Dashboard
         private void TournamentsFormBtn_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.activeButton);
-            OpenChildForm(new TournamentsForm());
+            OpenChildForm(new TournamentsForm(currentAccount, this));
         }
 
         private void homePageLogoBtn_Click(object sender, EventArgs e)

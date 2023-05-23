@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FerarimTournaments.Objects;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,11 @@ namespace FerarimTournaments.Dashboard
 {
     public partial class TournamentsInfoForm : Form
     {
-        public TournamentsInfoForm()
+        private Tournament tournamentInstance;
+        public TournamentsInfoForm(Tournament tournament)
         {
             InitializeComponent();
+            this.tournamentInstance = tournament;
         }
     }
 }
