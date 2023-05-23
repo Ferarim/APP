@@ -20,7 +20,6 @@ namespace FerarimTournaments.Logic
     {
         private const string IPADDRESS = "http://164.90.173.109:1337/";
 
-
         #region login
         public static Account GetAccount(int id, string username, string password)
         {
@@ -38,7 +37,7 @@ namespace FerarimTournaments.Logic
                 var result = streamReader.ReadToEnd();
                 try
                 {
-                    responseObject = JsonConvert.DeserializeObject<Account>(result);                    
+                    responseObject = JsonConvert.DeserializeObject<Account>(result);
                 }
                 catch (Exception e)
                 {
@@ -85,7 +84,6 @@ namespace FerarimTournaments.Logic
         public static void RequestRegister(string username, string firstname, string lastname, string password)
         {
             var httpWebRequest = (HttpWebRequest)WebRequest.Create(IPADDRESS + "api/v1/accounts");
-            Console.WriteLine(IPADDRESS + "api/v1/accounts/");
             httpWebRequest.ContentType = "application/json";
             httpWebRequest.Method = "POST";
 
@@ -95,9 +93,9 @@ namespace FerarimTournaments.Logic
                     "\",\r\n\t\"firstName\":\"" + firstname +
                     "\",\r\n\t\"lastName\":\"" + lastname +
                     "\",\r\n\t\"password\":\"" + password + "\"\r\n}";*/
-                string json = "{\r\n\t\"username\":\"" + "burak" +
-                    "\",\r\n\t\"firstName\":\"" + "Jan" +
-                    "\",\r\n\t\"lastName\":\"" + "Novak" +
+                string json = "{\r\n\t\"username\":\"" + "biribiri" +
+                    "\",\r\n\t\"firstName\":\"" + "a" +
+                    "\",\r\n\t\"lastName\":\"" + "a" +
                     "\",\r\n\t\"password\":\"" + "admin" + "\"\r\n}";
                 Console.WriteLine(json);
 

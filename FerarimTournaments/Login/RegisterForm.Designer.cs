@@ -38,6 +38,10 @@
             this.password = new System.Windows.Forms.TextBox();
             this.loginButton = new FerarimTournaments.LoginButton();
             this.registerButton = new FerarimTournaments.LoginButton();
+            this.usrnameLabel = new System.Windows.Forms.Label();
+            this.fnameLabel = new System.Windows.Forms.Label();
+            this.lnameLabel = new System.Windows.Forms.Label();
+            this.passLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -96,7 +100,7 @@
             this.firstName.Multiline = true;
             this.firstName.Name = "firstName";
             this.firstName.Size = new System.Drawing.Size(424, 25);
-            this.firstName.TabIndex = 0;
+            this.firstName.TabIndex = 1;
             // 
             // panel3
             // 
@@ -123,7 +127,7 @@
             this.lastName.Multiline = true;
             this.lastName.Name = "lastName";
             this.lastName.Size = new System.Drawing.Size(424, 25);
-            this.lastName.TabIndex = 0;
+            this.lastName.TabIndex = 2;
             // 
             // panel4
             // 
@@ -150,7 +154,7 @@
             this.password.Multiline = true;
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(424, 25);
-            this.password.TabIndex = 0;
+            this.password.TabIndex = 3;
             // 
             // loginButton
             // 
@@ -163,7 +167,7 @@
             this.loginButton.Margin = new System.Windows.Forms.Padding(4);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(200, 49);
-            this.loginButton.TabIndex = 4;
+            this.loginButton.TabIndex = 5;
             this.loginButton.Text = "Login";
             this.loginButton.UseVisualStyleBackColor = false;
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
@@ -179,17 +183,65 @@
             this.registerButton.Margin = new System.Windows.Forms.Padding(4);
             this.registerButton.Name = "registerButton";
             this.registerButton.Size = new System.Drawing.Size(200, 49);
-            this.registerButton.TabIndex = 5;
+            this.registerButton.TabIndex = 4;
             this.registerButton.Text = "Register";
             this.registerButton.UseVisualStyleBackColor = false;
             this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
+            // 
+            // usrnameLabel
+            // 
+            this.usrnameLabel.AutoSize = true;
+            this.usrnameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usrnameLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.usrnameLabel.Location = new System.Drawing.Point(12, 48);
+            this.usrnameLabel.Name = "usrnameLabel";
+            this.usrnameLabel.Size = new System.Drawing.Size(116, 25);
+            this.usrnameLabel.TabIndex = 6;
+            this.usrnameLabel.Text = "Username:";
+            // 
+            // fnameLabel
+            // 
+            this.fnameLabel.AutoSize = true;
+            this.fnameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fnameLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.fnameLabel.Location = new System.Drawing.Point(12, 138);
+            this.fnameLabel.Name = "fnameLabel";
+            this.fnameLabel.Size = new System.Drawing.Size(122, 25);
+            this.fnameLabel.TabIndex = 7;
+            this.fnameLabel.Text = "First Name:";
+            // 
+            // lnameLabel
+            // 
+            this.lnameLabel.AutoSize = true;
+            this.lnameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnameLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lnameLabel.Location = new System.Drawing.Point(12, 228);
+            this.lnameLabel.Name = "lnameLabel";
+            this.lnameLabel.Size = new System.Drawing.Size(121, 25);
+            this.lnameLabel.TabIndex = 8;
+            this.lnameLabel.Text = "Last Name:";
+            // 
+            // passLabel
+            // 
+            this.passLabel.AutoSize = true;
+            this.passLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.passLabel.Location = new System.Drawing.Point(12, 318);
+            this.passLabel.Name = "passLabel";
+            this.passLabel.Size = new System.Drawing.Size(112, 25);
+            this.passLabel.TabIndex = 9;
+            this.passLabel.Text = "Password:";
             // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(172)))), ((int)(((byte)(189)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(43)))), ((int)(((byte)(84)))));
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.passLabel);
+            this.Controls.Add(this.lnameLabel);
+            this.Controls.Add(this.fnameLabel);
+            this.Controls.Add(this.usrnameLabel);
             this.Controls.Add(this.registerButton);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.panel4);
@@ -209,6 +261,7 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -224,5 +277,9 @@
         private System.Windows.Forms.TextBox password;
         private LoginButton loginButton;
         private LoginButton registerButton;
+        private System.Windows.Forms.Label usrnameLabel;
+        private System.Windows.Forms.Label fnameLabel;
+        private System.Windows.Forms.Label lnameLabel;
+        private System.Windows.Forms.Label passLabel;
     }
 }
