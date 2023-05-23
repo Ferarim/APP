@@ -19,11 +19,13 @@ namespace FerarimTournaments.Dashboard
         private Form currentChildForm;
         private Account currentAccount;
 
+        public static string CURRENT_ACCOUNT_ROLE;
         public HomeForm(Account account)
         {
             InitializeComponent();
 
             this.currentAccount = account;
+            CURRENT_ACCOUNT_ROLE = account.Role;
 
             this.timer1.Start();
             

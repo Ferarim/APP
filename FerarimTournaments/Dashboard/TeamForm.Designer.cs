@@ -32,11 +32,11 @@
             this.joinLabel = new System.Windows.Forms.Label();
             this.notInTeamLabel = new System.Windows.Forms.Label();
             this.teamPanel = new System.Windows.Forms.Panel();
-            this.TeamNameLabel = new System.Windows.Forms.Label();
-            this.teamOwnerLabel = new System.Windows.Forms.Label();
-            this.joinButton = new FerarimTournaments.LoginButton();
-            this.teammates = new FerarimTournaments.LoginButton();
             this.teamSettings = new FerarimTournaments.LoginButton();
+            this.teammates = new FerarimTournaments.LoginButton();
+            this.teamOwnerLabel = new System.Windows.Forms.Label();
+            this.TeamNameLabel = new System.Windows.Forms.Label();
+            this.joinButton = new FerarimTournaments.LoginButton();
             this.teamPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,6 +48,7 @@
             this.teamCodeBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(161)))), ((int)(((byte)(166)))));
             this.teamCodeBox.Location = new System.Drawing.Point(255, 47);
             this.teamCodeBox.Margin = new System.Windows.Forms.Padding(4);
+            this.teamCodeBox.Multiline = true;
             this.teamCodeBox.Name = "teamCodeBox";
             this.teamCodeBox.Size = new System.Drawing.Size(633, 30);
             this.teamCodeBox.TabIndex = 1;
@@ -59,7 +60,7 @@
             this.joinLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(243)))), ((int)(((byte)(145)))));
             this.joinLabel.Location = new System.Drawing.Point(37, 43);
             this.joinLabel.Name = "joinLabel";
-            this.joinLabel.Size = new System.Drawing.Size(130, 29);
+            this.joinLabel.Size = new System.Drawing.Size(161, 37);
             this.joinLabel.TabIndex = 5;
             this.joinLabel.Text = "Join team";
             // 
@@ -70,7 +71,7 @@
             this.notInTeamLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(243)))), ((int)(((byte)(145)))));
             this.notInTeamLabel.Location = new System.Drawing.Point(287, 361);
             this.notInTeamLabel.Name = "notInTeamLabel";
-            this.notInTeamLabel.Size = new System.Drawing.Size(418, 43);
+            this.notInTeamLabel.Size = new System.Drawing.Size(505, 52);
             this.notInTeamLabel.TabIndex = 6;
             this.notInTeamLabel.Text = "You are not in a team";
             this.notInTeamLabel.Click += new System.EventHandler(this.label1_Click_1);
@@ -87,42 +88,19 @@
             this.teamPanel.TabIndex = 8;
             this.teamPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // TeamNameLabel
+            // teamSettings
             // 
-            this.TeamNameLabel.AutoSize = true;
-            this.TeamNameLabel.Font = new System.Drawing.Font("Cascadia Mono", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.TeamNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(243)))), ((int)(((byte)(145)))));
-            this.TeamNameLabel.Location = new System.Drawing.Point(403, 57);
-            this.TeamNameLabel.Name = "TeamNameLabel";
-            this.TeamNameLabel.Size = new System.Drawing.Size(341, 85);
-            this.TeamNameLabel.TabIndex = 6;
-            this.TeamNameLabel.Text = "TeamName";
-            this.TeamNameLabel.Click += new System.EventHandler(this.label1_Click_2);
-            // 
-            // teamOwnerLabel
-            // 
-            this.teamOwnerLabel.AutoSize = true;
-            this.teamOwnerLabel.Font = new System.Drawing.Font("Cascadia Mono", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.teamOwnerLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(243)))), ((int)(((byte)(145)))));
-            this.teamOwnerLabel.Location = new System.Drawing.Point(483, 155);
-            this.teamOwnerLabel.Name = "teamOwnerLabel";
-            this.teamOwnerLabel.Size = new System.Drawing.Size(170, 39);
-            this.teamOwnerLabel.TabIndex = 7;
-            this.teamOwnerLabel.Text = "TeamOwner";
-            // 
-            // joinButton
-            // 
-            this.joinButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(203)))), ((int)(((byte)(145)))));
-            this.joinButton.FlatAppearance.BorderSize = 0;
-            this.joinButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.joinButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.joinButton.ForeColor = System.Drawing.Color.White;
-            this.joinButton.Location = new System.Drawing.Point(935, 47);
-            this.joinButton.Name = "joinButton";
-            this.joinButton.Size = new System.Drawing.Size(150, 40);
-            this.joinButton.TabIndex = 9;
-            this.joinButton.Text = "join";
-            this.joinButton.UseVisualStyleBackColor = false;
+            this.teamSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(203)))), ((int)(((byte)(145)))));
+            this.teamSettings.FlatAppearance.BorderSize = 0;
+            this.teamSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.teamSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.teamSettings.ForeColor = System.Drawing.Color.White;
+            this.teamSettings.Location = new System.Drawing.Point(935, 154);
+            this.teamSettings.Name = "teamSettings";
+            this.teamSettings.Size = new System.Drawing.Size(150, 40);
+            this.teamSettings.TabIndex = 11;
+            this.teamSettings.Text = "TeamSettings";
+            this.teamSettings.UseVisualStyleBackColor = false;
             // 
             // teammates
             // 
@@ -138,19 +116,42 @@
             this.teammates.Text = "Teammates";
             this.teammates.UseVisualStyleBackColor = false;
             // 
-            // teamSettings
+            // teamOwnerLabel
             // 
-            this.teamSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(203)))), ((int)(((byte)(145)))));
-            this.teamSettings.FlatAppearance.BorderSize = 0;
-            this.teamSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.teamSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.teamSettings.ForeColor = System.Drawing.Color.White;
-            this.teamSettings.Location = new System.Drawing.Point(935, 154);
-            this.teamSettings.Name = "teamSettings";
-            this.teamSettings.Size = new System.Drawing.Size(150, 40);
-            this.teamSettings.TabIndex = 11;
-            this.teamSettings.Text = "TeamSettings";
-            this.teamSettings.UseVisualStyleBackColor = false;
+            this.teamOwnerLabel.AutoSize = true;
+            this.teamOwnerLabel.Font = new System.Drawing.Font("Cascadia Mono", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.teamOwnerLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(243)))), ((int)(((byte)(145)))));
+            this.teamOwnerLabel.Location = new System.Drawing.Point(483, 155);
+            this.teamOwnerLabel.Name = "teamOwnerLabel";
+            this.teamOwnerLabel.Size = new System.Drawing.Size(220, 49);
+            this.teamOwnerLabel.TabIndex = 7;
+            this.teamOwnerLabel.Text = "TeamOwner";
+            // 
+            // TeamNameLabel
+            // 
+            this.TeamNameLabel.AutoSize = true;
+            this.TeamNameLabel.Font = new System.Drawing.Font("Cascadia Mono", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.TeamNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(243)))), ((int)(((byte)(145)))));
+            this.TeamNameLabel.Location = new System.Drawing.Point(403, 57);
+            this.TeamNameLabel.Name = "TeamNameLabel";
+            this.TeamNameLabel.Size = new System.Drawing.Size(421, 106);
+            this.TeamNameLabel.TabIndex = 6;
+            this.TeamNameLabel.Text = "TeamName";
+            this.TeamNameLabel.Click += new System.EventHandler(this.label1_Click_2);
+            // 
+            // joinButton
+            // 
+            this.joinButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(203)))), ((int)(((byte)(145)))));
+            this.joinButton.FlatAppearance.BorderSize = 0;
+            this.joinButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.joinButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.joinButton.ForeColor = System.Drawing.Color.White;
+            this.joinButton.Location = new System.Drawing.Point(935, 47);
+            this.joinButton.Name = "joinButton";
+            this.joinButton.Size = new System.Drawing.Size(150, 40);
+            this.joinButton.TabIndex = 9;
+            this.joinButton.Text = "join";
+            this.joinButton.UseVisualStyleBackColor = false;
             // 
             // TeamForm
             // 

@@ -1,4 +1,5 @@
-﻿using FerarimTournaments.Objects;
+﻿using FerarimTournaments.Dashboard;
+using FerarimTournaments.Objects;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,11 +16,11 @@ namespace FerarimTournaments.Controls
     {
         private Account accountInstance;
         private string currentAccountRole;
-        public AccountControl(Account account, string currentAccountRole)
+        public AccountControl(Account account)
         {
             InitializeComponent();
             this.accountInstance = account;
-            this.currentAccountRole = currentAccountRole;
+            this.currentAccountRole = HomeForm.CURRENT_ACCOUNT_ROLE;
             InitItems();
             CheckForAdmin();
         }
