@@ -18,12 +18,7 @@ namespace FerarimTournaments.Login
         public RegisterForm(LoginForm loginForm)
         {
             InitializeComponent();
-            this.loginForm = loginForm;
-            username.AcceptsTab = false;
-            firstName.AcceptsTab = false;
-            lastName.AcceptsTab = false;
-            password.AcceptsTab = false;
-
+            this.loginForm = loginForm;          
         }
 
         private void RegisterForm_FormClosed(object sender, FormClosedEventArgs e)

@@ -54,7 +54,6 @@
             // password
             // 
             this.password.AcceptsReturn = true;
-            this.password.AcceptsTab = true;
             this.password.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.password.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.password.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -81,7 +80,6 @@
             // username
             // 
             this.username.AcceptsReturn = true;
-            this.username.AcceptsTab = true;
             this.username.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.username.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.username.Dock = System.Windows.Forms.DockStyle.Fill;

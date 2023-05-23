@@ -21,9 +21,7 @@ namespace FerarimTournaments.Login
 
         public LoginForm()
         {
-            InitializeComponent();
-            username.AcceptsTab = false;
-            password.AcceptsTab = false;
+            InitializeComponent();           
         }
      
 
