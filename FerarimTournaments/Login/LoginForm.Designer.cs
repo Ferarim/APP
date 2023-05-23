@@ -36,6 +36,7 @@
             this.passLabel = new System.Windows.Forms.Label();
             this.registerButton = new FerarimTournaments.LoginButton();
             this.loginButton = new FerarimTournaments.LoginButton();
+            this.errorLabel = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -146,11 +147,22 @@
             this.loginButton.UseVisualStyleBackColor = false;
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
+            // errorLabel
+            // 
+            this.errorLabel.AutoSize = true;
+            this.errorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errorLabel.ForeColor = System.Drawing.Color.Red;
+            this.errorLabel.Location = new System.Drawing.Point(141, 329);
+            this.errorLabel.Name = "errorLabel";
+            this.errorLabel.Size = new System.Drawing.Size(0, 25);
+            this.errorLabel.TabIndex = 10;
+            // 
             // LoginForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(43)))), ((int)(((byte)(84)))));
             this.ClientSize = new System.Drawing.Size(734, 506);
+            this.Controls.Add(this.errorLabel);
             this.Controls.Add(this.passLabel);
             this.Controls.Add(this.usrnameLabel);
             this.Controls.Add(this.registerButton);
@@ -184,5 +196,6 @@
         private LoginButton registerButton;
         private System.Windows.Forms.Label usrnameLabel;
         private System.Windows.Forms.Label passLabel;
+        private System.Windows.Forms.Label errorLabel;
     }
 }

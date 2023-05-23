@@ -18,6 +18,7 @@ namespace FerarimTournaments.Objects
         private string firstName;
         private string lastName;
         private int teamId;
+        private string password;
 
         public Account()
         {
@@ -42,6 +43,8 @@ namespace FerarimTournaments.Objects
 
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public int TeamId { get => teamId; set => teamId = value; }
+
+        public string Password { get => password; set => password = value; }
 
 
 

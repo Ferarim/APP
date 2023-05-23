@@ -136,6 +136,7 @@
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Objects\Account.cs" />
+    <Compile Include="Objects\Team.cs" />
     <Compile Include="Objects\Tournament.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
