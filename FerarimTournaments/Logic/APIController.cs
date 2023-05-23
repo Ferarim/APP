@@ -13,12 +13,41 @@ using FerarimTournaments.Login;
 using FerarimTournaments.Objects;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using System.Net.Http.Headers;
+using System.Windows.Controls;
 
 namespace FerarimTournaments.Logic
 {
     public class APIController
     {
         private const string IPADDRESS = "http://164.90.173.109:1337/";
+
+        #region teams
+        public static Team CreateTeam(string username, string password, string teamName, string teamPass)
+        {
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create(IPADDRESS + "api/v1/teams/");
+
+            httpWebRequest.ContentType = "application/json";
+            httpWebRequest.Method = "GET";
+            httpWebRequest.Headers.Add("Credentials", username + ":" + password);
+
+            var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+            Team responseObject = null;
+            using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+            {
+                var result = streamReader.ReadToEnd();
+                try
+                {
+                    responseObject = JsonConvert.DeserializeObject<Team>(result);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+            }
+            return responseObject;
+        }
+
+        #endregion
 
         #region login
         public static Account GetAccount(int id, string username, string password)
@@ -63,6 +92,7 @@ namespace FerarimTournaments.Logic
             }
 
             var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+            
             LoginResponse responseObject = null;
             using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
             {
@@ -89,14 +119,14 @@ namespace FerarimTournaments.Logic
 
             using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
             {
-                /*string json = "{\r\n\t\"username\":\"" + username +
+                string json = "{\r\n\t\"username\":\"" + username +
                     "\",\r\n\t\"firstName\":\"" + firstname +
                     "\",\r\n\t\"lastName\":\"" + lastname +
-                    "\",\r\n\t\"password\":\"" + password + "\"\r\n}";*/
-                string json = "{\r\n\t\"username\":\"" + "biribiri" +
-                    "\",\r\n\t\"firstName\":\"" + "a" +
-                    "\",\r\n\t\"lastName\":\"" + "a" +
-                    "\",\r\n\t\"password\":\"" + "admin" + "\"\r\n}";
+                    "\",\r\n\t\"password\":\"" + password + "\"\r\n}";
+                /*string json = "{\r\n\t\"username\":\"" + "admin" +
+                    "\",\r\n\t\"firstName\":\"" + "Jan" +
+                    "\",\r\n\t\"lastName\":\"" + "Novak" +
+                    "\",\r\n\t\"password\":\"" + "admin" + "\"\r\n}";*/
                 Console.WriteLine(json);
 
 
