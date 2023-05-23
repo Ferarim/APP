@@ -14,9 +14,33 @@ namespace FerarimTournaments.Controls
     public partial class AccountControl : UserControl
     {
         private Account accountInstance;
-        public AccountControl()
+        private string currentAccountRole;
+        public AccountControl(Account account, string currentAccountRole)
         {
             InitializeComponent();
+            this.accountInstance = account;
+            this.currentAccountRole = currentAccountRole;
+            InitItems();
+            CheckForAdmin();
+        }
+
+        public void InitItems()
+        {
+            this.usernameLabel.Text = accountInstance.UserName;
+            this.nameAndSurnameLabel.Text = accountInstance.FirstName + " " + accountInstance.LastName;
+            this.roleLabel.Text = accountInstance.Role;
+        }
+
+        public void CheckForAdmin()
+        {
+            if(currentAccountRole == "ROLE_USER")
+            {
+                this.removeAccountFromTeamBtn.Visible = false;
+            }
+        }
+        private void removeAccountFromTeamBtn_Click(object sender, EventArgs e)
+        {
+            //do the math bruh
         }
     }
 }
