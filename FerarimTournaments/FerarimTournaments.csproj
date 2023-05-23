@@ -150,6 +150,11 @@
     <Compile Include="Tools\TeamSettingsForm.Designer.cs">
       <DependentUpon>TeamSettingsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tournament.cs" />
+    <Compile Include="TournamentControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TournamentControl.Designer.cs" />
     <EmbeddedResource Include="Dashboard\AccountInfoForm.resx">
       <DependentUpon>AccountInfoForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -196,6 +201,7 @@
     <EmbeddedResource Include="Tools\TeamSettingsForm.resx">
       <DependentUpon>TeamSettingsForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TournamentControl.resx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
