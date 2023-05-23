@@ -32,6 +32,8 @@
             this.password = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.username = new System.Windows.Forms.TextBox();
+            this.usrnameLabel = new System.Windows.Forms.Label();
+            this.passLabel = new System.Windows.Forms.Label();
             this.registerButton = new FerarimTournaments.LoginButton();
             this.loginButton = new FerarimTournaments.LoginButton();
             this.panel2.SuspendLayout();
@@ -92,6 +94,28 @@
             this.username.Size = new System.Drawing.Size(441, 25);
             this.username.TabIndex = 0;
             // 
+            // usrnameLabel
+            // 
+            this.usrnameLabel.AutoSize = true;
+            this.usrnameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usrnameLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.usrnameLabel.Location = new System.Drawing.Point(128, 20);
+            this.usrnameLabel.Name = "usrnameLabel";
+            this.usrnameLabel.Size = new System.Drawing.Size(116, 25);
+            this.usrnameLabel.TabIndex = 4;
+            this.usrnameLabel.Text = "Username:";
+            // 
+            // passLabel
+            // 
+            this.passLabel.AutoSize = true;
+            this.passLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passLabel.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.passLabel.Location = new System.Drawing.Point(128, 202);
+            this.passLabel.Name = "passLabel";
+            this.passLabel.Size = new System.Drawing.Size(112, 25);
+            this.passLabel.TabIndex = 5;
+            this.passLabel.Text = "Password:";
+            // 
             // registerButton
             // 
             this.registerButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(203)))), ((int)(((byte)(145)))));
@@ -127,8 +151,10 @@
             // LoginForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(172)))), ((int)(((byte)(189)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(43)))), ((int)(((byte)(84)))));
             this.ClientSize = new System.Drawing.Size(734, 506);
+            this.Controls.Add(this.passLabel);
+            this.Controls.Add(this.usrnameLabel);
             this.Controls.Add(this.registerButton);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.panel1);
@@ -146,6 +172,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -157,5 +184,7 @@
         private System.Windows.Forms.TextBox password;
         private LoginButton loginButton;
         private LoginButton registerButton;
+        private System.Windows.Forms.Label usrnameLabel;
+        private System.Windows.Forms.Label passLabel;
     }
 }

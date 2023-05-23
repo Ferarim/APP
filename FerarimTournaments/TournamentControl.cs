@@ -20,7 +20,7 @@ namespace FerarimTournaments.Controls
         {
             InitializeComponent();
             this.tournamentInstance = tournament;
-            this.homeForm = homeForm;
+            this.homeForm= homeForm;
         }
 
         public Tournament TournamentInstance { get => tournamentInstance; set => tournamentInstance = value; }
