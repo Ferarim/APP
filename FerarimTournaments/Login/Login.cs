@@ -21,50 +21,50 @@ namespace FerarimTournaments.Login
         /// Attempts to fetch data from API, if successful, starts ProceedToHome(), 
         /// else prompts user for another try. 
         /// </summary>
-        private void StartLogin()
+        private void StartLogin(LoginForm form)
         {
             lock (_lock)
             {
-                string username = LoginForm.ActiveLoginForm.Username.Text;
-                string password = LoginForm.ActiveLoginForm.Password.Text;
-
+                string username = form.Username.Text;
+                string password = form.Password.Text;
+                                                                            //HashString(password)
                 LoginResponse response = APIController.RequestLogin(username, password);
                 if (response == null) throw new Exception("login fetch failed");
 
-                Console.WriteLine(response.role + " " + response.Message + " " + response.Id + " " + response.Success);
-                if (response.Success) ProceedToHome(response.Id);
+                if (response.Success) ProceedToHome(form, response.Id);
                 else
                 {
-                   //print message to label
-                   //delete password field
-                }
-                
+                    //print message to label
+                    //delete password field
+                    Action resetText = delegate { form.Password.Text = ""; };
+                    form.Invoke(resetText);
+                }               
             }
         }
 
         /// <summary>
         /// Requests an account object corresponding to the id passed, then starts HomeForm.
         /// </summary>
-        private void ProceedToHome(int id)
+        private void ProceedToHome(LoginForm form, int id)
         {
-            //pull for account object, start homepage
-            Account currentUser = APIController.GetAccount(id);
+            //pull for account object, start homepage                       //hash
+            Account currentUser = APIController.GetAccount(id, form.Username.Text, form.Username.Text);
             if (currentUser == null) throw new Exception("account fetch failed");
 
-            Action closeForm = delegate { LoginForm.ActiveLoginForm.Close(); };
-            LoginForm.ActiveLoginForm.Invoke(closeForm);
+            Action closeForm = delegate { form.Close(); };
+            form.Invoke(closeForm);
             Application.Run(new HomeForm(currentUser));
         }
 
         /// <summary>
         /// Starts a new thread that attempts to log user in.
         /// </summary>
-        public void AttemptLog()
+        public void AttemptLog(LoginForm form)
         {   
             if(fetchThread != null && fetchThread.ThreadState == ThreadState.Running)
                 fetchThread.Abort();
 
-            fetchThread = new Thread(StartLogin);
+            fetchThread = new Thread(() => StartLogin(form));
             fetchThread.Start();          
         }
 

@@ -46,7 +46,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(243)))), ((int)(((byte)(145)))));
             this.label2.Location = new System.Drawing.Point(139, 127);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 37);
+            this.label2.Size = new System.Drawing.Size(78, 29);
             this.label2.TabIndex = 8;
             this.label2.Text = "Name:";
             // 
@@ -73,7 +73,7 @@
             this.changeNameTextBox.Location = new System.Drawing.Point(13, 12);
             this.changeNameTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.changeNameTextBox.Name = "changeNameTextBox";
-            this.changeNameTextBox.Size = new System.Drawing.Size(441, 23);
+            this.changeNameTextBox.Size = new System.Drawing.Size(441, 19);
             this.changeNameTextBox.TabIndex = 0;
             // 
             // label3
@@ -83,7 +83,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(243)))), ((int)(((byte)(145)))));
             this.label3.Location = new System.Drawing.Point(139, 234);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(145, 37);
+            this.label3.Size = new System.Drawing.Size(117, 29);
             this.label3.TabIndex = 10;
             this.label3.Text = "Surname:";
             // 
@@ -110,7 +110,7 @@
             this.changeSurnameTextBox.Location = new System.Drawing.Point(13, 12);
             this.changeSurnameTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.changeSurnameTextBox.Name = "changeSurnameTextBox";
-            this.changeSurnameTextBox.Size = new System.Drawing.Size(441, 23);
+            this.changeSurnameTextBox.Size = new System.Drawing.Size(441, 19);
             this.changeSurnameTextBox.TabIndex = 0;
             // 
             // applyChangesBtn
