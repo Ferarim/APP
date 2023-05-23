@@ -72,13 +72,15 @@
             this.removeAccountFromTeamBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(203)))), ((int)(((byte)(145)))));
             this.removeAccountFromTeamBtn.FlatAppearance.BorderSize = 0;
             this.removeAccountFromTeamBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.removeAccountFromTeamBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.removeAccountFromTeamBtn.ForeColor = System.Drawing.Color.White;
-            this.removeAccountFromTeamBtn.Location = new System.Drawing.Point(238, 63);
+            this.removeAccountFromTeamBtn.Location = new System.Drawing.Point(266, 53);
             this.removeAccountFromTeamBtn.Name = "removeAccountFromTeamBtn";
             this.removeAccountFromTeamBtn.Size = new System.Drawing.Size(104, 40);
             this.removeAccountFromTeamBtn.TabIndex = 8;
             this.removeAccountFromTeamBtn.Text = "Remove";
             this.removeAccountFromTeamBtn.UseVisualStyleBackColor = false;
+            this.removeAccountFromTeamBtn.Click += new System.EventHandler(this.removeAccountFromTeamBtn_Click);
             // 
             // AccountControl
             // 
