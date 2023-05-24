@@ -137,7 +137,7 @@ namespace FerarimTournaments.Dashboard
         public void yourTeamPanelClick(object sender, EventArgs e)
         {
             ActivateButton(this.TeamFormBtn, RGBColors.activeButton);
-            OpenChildForm(new TeamForm(currentAccount));
+            OpenChildForm(new TeamForm(currentAccount, this));
         }
 
         private void HomeForm_FormClosed(object sender, FormClosedEventArgs e)
