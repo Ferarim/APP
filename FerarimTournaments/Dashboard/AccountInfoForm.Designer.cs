@@ -38,10 +38,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.yourTeamLabel = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.teamLogoPicture = new System.Windows.Forms.PictureBox();
             this.changeAccountInfoBtn = new FerarimTournaments.LoginButton();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.teamLogoPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -126,7 +124,7 @@
             this.panel1.Controls.Add(this.yourTeamLabel);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel1.Location = new System.Drawing.Point(577, 414);
+            this.panel1.Location = new System.Drawing.Point(347, 411);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(443, 156);
             this.panel1.TabIndex = 12;
@@ -156,15 +154,6 @@
             this.label5.Text = "Your Team:";
             this.label5.Click += new System.EventHandler(this.yourTeamClick);
             // 
-            // teamLogoPicture
-            // 
-            this.teamLogoPicture.Location = new System.Drawing.Point(165, 358);
-            this.teamLogoPicture.Name = "teamLogoPicture";
-            this.teamLogoPicture.Size = new System.Drawing.Size(270, 270);
-            this.teamLogoPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.teamLogoPicture.TabIndex = 7;
-            this.teamLogoPicture.TabStop = false;
-            // 
             // changeAccountInfoBtn
             // 
             this.changeAccountInfoBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(203)))), ((int)(((byte)(145)))));
@@ -186,7 +175,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(43)))), ((int)(((byte)(84)))));
             this.ClientSize = new System.Drawing.Size(1140, 733);
             this.Controls.Add(this.changeAccountInfoBtn);
-            this.Controls.Add(this.teamLogoPicture);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.roleLabel);
             this.Controls.Add(this.surnameLabel);
@@ -199,7 +187,6 @@
             this.Text = "AccountInfoForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.teamLogoPicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -215,7 +202,6 @@
         private System.Windows.Forms.Label surnameLabel;
         private System.Windows.Forms.Label roleLabel;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox teamLogoPicture;
         private System.Windows.Forms.Label yourTeamLabel;
         private System.Windows.Forms.Label label5;
         private LoginButton changeAccountInfoBtn;

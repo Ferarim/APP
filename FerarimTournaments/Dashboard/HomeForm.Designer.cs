@@ -44,7 +44,6 @@ namespace FerarimTournaments.Dashboard
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.teamLogoPicture = new System.Windows.Forms.PictureBox();
             this.yourTeamLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.timeLabel = new System.Windows.Forms.Label();
@@ -55,7 +54,6 @@ namespace FerarimTournaments.Dashboard
             this.childFormPanel.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.teamLogoPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // SideBarPanel
@@ -217,14 +215,13 @@ namespace FerarimTournaments.Dashboard
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(243)))), ((int)(((byte)(145)))));
             this.label4.Location = new System.Drawing.Point(3, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(286, 29);
+            this.label4.Size = new System.Drawing.Size(353, 37);
             this.label4.TabIndex = 5;
             this.label4.Text = "Upcoming Tournaments:";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(43)))), ((int)(((byte)(74)))));
-            this.panel1.Controls.Add(this.teamLogoPicture);
             this.panel1.Controls.Add(this.yourTeamLabel);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -235,17 +232,6 @@ namespace FerarimTournaments.Dashboard
             this.panel1.TabIndex = 2;
             this.panel1.Click += new System.EventHandler(this.yourTeamPanelClick);
             // 
-            // teamLogoPicture
-            // 
-            this.teamLogoPicture.Location = new System.Drawing.Point(11, 39);
-            this.teamLogoPicture.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.teamLogoPicture.Name = "teamLogoPicture";
-            this.teamLogoPicture.Size = new System.Drawing.Size(80, 80);
-            this.teamLogoPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.teamLogoPicture.TabIndex = 7;
-            this.teamLogoPicture.TabStop = false;
-            this.teamLogoPicture.Click += new System.EventHandler(this.yourTeamPanelClick);
-            // 
             // yourTeamLabel
             // 
             this.yourTeamLabel.AutoSize = true;
@@ -253,7 +239,7 @@ namespace FerarimTournaments.Dashboard
             this.yourTeamLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(243)))), ((int)(((byte)(145)))));
             this.yourTeamLabel.Location = new System.Drawing.Point(97, 63);
             this.yourTeamLabel.Name = "yourTeamLabel";
-            this.yourTeamLabel.Size = new System.Drawing.Size(247, 29);
+            this.yourTeamLabel.Size = new System.Drawing.Size(305, 37);
             this.yourTeamLabel.TabIndex = 6;
             this.yourTeamLabel.Text = "You\'re not in team";
             this.yourTeamLabel.Click += new System.EventHandler(this.yourTeamPanelClick);
@@ -265,7 +251,7 @@ namespace FerarimTournaments.Dashboard
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(243)))), ((int)(((byte)(145)))));
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 29);
+            this.label1.Size = new System.Drawing.Size(177, 37);
             this.label1.TabIndex = 5;
             this.label1.Text = "Your Team:";
             this.label1.Click += new System.EventHandler(this.yourTeamPanelClick);
@@ -277,7 +263,7 @@ namespace FerarimTournaments.Dashboard
             this.timeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(243)))), ((int)(((byte)(145)))));
             this.timeLabel.Location = new System.Drawing.Point(5, 9);
             this.timeLabel.Name = "timeLabel";
-            this.timeLabel.Size = new System.Drawing.Size(104, 29);
+            this.timeLabel.Size = new System.Drawing.Size(129, 37);
             this.timeLabel.TabIndex = 4;
             this.timeLabel.Text = "Ferarim";
             // 
@@ -309,7 +295,6 @@ namespace FerarimTournaments.Dashboard
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.teamLogoPicture)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -325,7 +310,6 @@ namespace FerarimTournaments.Dashboard
         private System.Windows.Forms.Label timeLabel;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox teamLogoPicture;
         private System.Windows.Forms.Label yourTeamLabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
