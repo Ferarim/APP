@@ -24,6 +24,9 @@ namespace FerarimTournaments.Logic
 
 
         #region teams
+        /// <summary>
+        /// Requests to join a team with the parameters passed. Returns true if successful.
+        /// </summary>      
         public static bool JoinTeam(string teamName, string teamPass)
         {
             var httpWebRequest = (HttpWebRequest)WebRequest.Create(IPADDRESS + "api/v1/teams/join");
@@ -31,7 +34,7 @@ namespace FerarimTournaments.Logic
             httpWebRequest.ContentType = "application/json";
             httpWebRequest.Method = "POST";
             httpWebRequest.Headers.Add("Credentials", credentials.Item1 + ":" + credentials.Item2);
-
+            Console.WriteLine(credentials.Item1 + ":" + credentials.Item2);
             using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
             {
                 string json = "{\r\n\t\"name\":\"" + teamName + "\",\r\n\t\"password\":\"" + teamPass + "\"\r\n}";
