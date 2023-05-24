@@ -24,9 +24,33 @@ namespace FerarimTournaments.Logic
 
 
         #region teams
-        public static Team CreateTeam(string teamName, string teamPass)
+        public static bool JoinTeam(string teamName, string teamPass)
         {
-            var httpWebRequest = (HttpWebRequest)WebRequest.Create(IPADDRESS + "api/v1/teams/");
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create(IPADDRESS + "api/v1/teams/join");
+
+            httpWebRequest.ContentType = "application/json";
+            httpWebRequest.Method = "POST";
+            httpWebRequest.Headers.Add("Credentials", credentials.Item1 + ":" + credentials.Item2);
+
+            using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
+            {
+                string json = "{\r\n\t\"name\":\"" + teamName + "\",\r\n\t\"password\":\"" + teamPass + "\"\r\n}";
+                streamWriter.Write(json);
+            }
+
+            var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+
+            if (httpResponse.StatusCode == HttpStatusCode.OK) return true;
+            else return false;
+        }
+
+
+        /// <summary>
+        /// Requests a team with the id passed. Returns null on fail.
+        /// </summary>
+        public static Team GetTeam(int id)
+        {
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create(IPADDRESS + "api/v1/teams/" + id);
 
             httpWebRequest.ContentType = "application/json";
             httpWebRequest.Method = "GET";
@@ -49,12 +73,33 @@ namespace FerarimTournaments.Logic
             return responseObject;
         }
 
+        /// <summary>
+        /// Sends request to create team with the passed parameters. Returns true if successful.
+        /// </summary>
+        public static bool CreateTeam(string teamName, string teamPass)
+        {
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create(IPADDRESS + "api/v1/teams/");
+
+            httpWebRequest.ContentType = "application/json";
+            httpWebRequest.Method = "POST";
+            httpWebRequest.Headers.Add("Credentials", credentials.Item1 + ":" + credentials.Item2);
+
+            using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
+            {
+                string json = "{\r\n\t\"name\":\"" + teamName + "\",\r\n\t\"password\":\"" + teamPass + "\"\r\n}";
+                streamWriter.Write(json);
+            }
+
+            var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+
+            if (httpResponse.StatusCode == HttpStatusCode.Accepted) return true;
+            else return false;
+        }
         #endregion
 
         #region login
         public static Account GetAccount(int id)
         {
-            Console.WriteLine(IPADDRESS + "api/v1/accounts/" + id);
             var httpWebRequest = (HttpWebRequest)WebRequest.Create(IPADDRESS + "api/v1/accounts/" + id);
             
             httpWebRequest.ContentType = "application/json";
@@ -88,9 +133,7 @@ namespace FerarimTournaments.Logic
             using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
             {
                 string json = "{\r\n\t\"name\":\""+username+"\",\r\n\t\"password\":\""+password+"\"\r\n}";
-
                 streamWriter.Write(json);
-                Console.WriteLine(json);
             }
 
             var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
