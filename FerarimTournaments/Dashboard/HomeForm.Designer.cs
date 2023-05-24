@@ -31,7 +31,9 @@ namespace FerarimTournaments.Dashboard
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeForm));
             this.SideBarPanel = new System.Windows.Forms.Panel();
+            this.logoutBtn = new FerarimTournaments.LoginButton();
             this.homePageLogoBtn = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TournamentsFormBtn = new FontAwesome.Sharp.IconButton();
@@ -47,7 +49,6 @@ namespace FerarimTournaments.Dashboard
             this.label1 = new System.Windows.Forms.Label();
             this.timeLabel = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.logoutBtn = new FerarimTournaments.LoginButton();
             this.SideBarPanel.SuspendLayout();
             this.homePageLogoBtn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -70,6 +71,22 @@ namespace FerarimTournaments.Dashboard
             this.SideBarPanel.Name = "SideBarPanel";
             this.SideBarPanel.Size = new System.Drawing.Size(243, 736);
             this.SideBarPanel.TabIndex = 0;
+            // 
+            // logoutBtn
+            // 
+            this.logoutBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(161)))), ((int)(((byte)(166)))));
+            this.logoutBtn.FlatAppearance.BorderSize = 0;
+            this.logoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logoutBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
+            this.logoutBtn.ForeColor = System.Drawing.Color.White;
+            this.logoutBtn.Location = new System.Drawing.Point(43, 671);
+            this.logoutBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.logoutBtn.Name = "logoutBtn";
+            this.logoutBtn.Size = new System.Drawing.Size(149, 39);
+            this.logoutBtn.TabIndex = 4;
+            this.logoutBtn.Text = "Logout";
+            this.logoutBtn.UseVisualStyleBackColor = false;
+            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
             // 
             // homePageLogoBtn
             // 
@@ -200,7 +217,7 @@ namespace FerarimTournaments.Dashboard
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(243)))), ((int)(((byte)(145)))));
             this.label4.Location = new System.Drawing.Point(3, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(353, 37);
+            this.label4.Size = new System.Drawing.Size(286, 29);
             this.label4.TabIndex = 5;
             this.label4.Text = "Upcoming Tournaments:";
             // 
@@ -236,7 +253,7 @@ namespace FerarimTournaments.Dashboard
             this.yourTeamLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(243)))), ((int)(((byte)(145)))));
             this.yourTeamLabel.Location = new System.Drawing.Point(97, 63);
             this.yourTeamLabel.Name = "yourTeamLabel";
-            this.yourTeamLabel.Size = new System.Drawing.Size(305, 37);
+            this.yourTeamLabel.Size = new System.Drawing.Size(247, 29);
             this.yourTeamLabel.TabIndex = 6;
             this.yourTeamLabel.Text = "You\'re not in team";
             this.yourTeamLabel.Click += new System.EventHandler(this.yourTeamPanelClick);
@@ -248,7 +265,7 @@ namespace FerarimTournaments.Dashboard
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(243)))), ((int)(((byte)(145)))));
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 37);
+            this.label1.Size = new System.Drawing.Size(143, 29);
             this.label1.TabIndex = 5;
             this.label1.Text = "Your Team:";
             this.label1.Click += new System.EventHandler(this.yourTeamPanelClick);
@@ -260,29 +277,13 @@ namespace FerarimTournaments.Dashboard
             this.timeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(243)))), ((int)(((byte)(145)))));
             this.timeLabel.Location = new System.Drawing.Point(5, 9);
             this.timeLabel.Name = "timeLabel";
-            this.timeLabel.Size = new System.Drawing.Size(129, 37);
+            this.timeLabel.Size = new System.Drawing.Size(104, 29);
             this.timeLabel.TabIndex = 4;
             this.timeLabel.Text = "Ferarim";
             // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // logoutBtn
-            // 
-            this.logoutBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(161)))), ((int)(((byte)(166)))));
-            this.logoutBtn.FlatAppearance.BorderSize = 0;
-            this.logoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.logoutBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
-            this.logoutBtn.ForeColor = System.Drawing.Color.White;
-            this.logoutBtn.Location = new System.Drawing.Point(43, 671);
-            this.logoutBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.logoutBtn.Name = "logoutBtn";
-            this.logoutBtn.Size = new System.Drawing.Size(149, 39);
-            this.logoutBtn.TabIndex = 4;
-            this.logoutBtn.Text = "Logout";
-            this.logoutBtn.UseVisualStyleBackColor = false;
-            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
             // 
             // HomeForm
             // 
@@ -292,7 +293,8 @@ namespace FerarimTournaments.Dashboard
             this.Controls.Add(this.childFormPanel);
             this.Controls.Add(this.SideBarPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "HomeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
