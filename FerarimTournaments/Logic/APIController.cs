@@ -20,15 +20,17 @@ namespace FerarimTournaments.Logic
     public class APIController
     {
         private const string IPADDRESS = "http://164.90.173.109:1337/";
+        public static (string, string) credentials;//username, password
+
 
         #region teams
-        public static Team CreateTeam(string username, string password, string teamName, string teamPass)
+        public static Team CreateTeam(string teamName, string teamPass)
         {
             var httpWebRequest = (HttpWebRequest)WebRequest.Create(IPADDRESS + "api/v1/teams/");
 
             httpWebRequest.ContentType = "application/json";
             httpWebRequest.Method = "GET";
-            httpWebRequest.Headers.Add("Credentials", username + ":" + password);
+            httpWebRequest.Headers.Add("Credentials", credentials.Item1 + ":" + credentials.Item2);
 
             var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
             Team responseObject = null;
@@ -50,14 +52,14 @@ namespace FerarimTournaments.Logic
         #endregion
 
         #region login
-        public static Account GetAccount(int id, string username, string password)
+        public static Account GetAccount(int id)
         {
             Console.WriteLine(IPADDRESS + "api/v1/accounts/" + id);
             var httpWebRequest = (HttpWebRequest)WebRequest.Create(IPADDRESS + "api/v1/accounts/" + id);
             
             httpWebRequest.ContentType = "application/json";
             httpWebRequest.Method = "GET";
-            httpWebRequest.Headers.Add("Credentials", username+":"+password);
+            httpWebRequest.Headers.Add("Credentials", credentials.Item1+":"+credentials.Item2);
 
             var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
             Account responseObject = null;
@@ -129,12 +131,8 @@ namespace FerarimTournaments.Logic
             }
             var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
 
-            using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
-            {
-                var result = streamReader.ReadToEnd();
-                if (result != "") return false;
-                return true;
-            }
+            if (httpResponse.StatusCode == HttpStatusCode.Created) return true;
+            else return false;         
         }
 
         #endregion

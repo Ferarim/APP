@@ -47,8 +47,9 @@ namespace FerarimTournaments.Login
         /// </summary>
         private void ProceedToHome(LoginForm form, int id)
         {
-            //pull for account object, start homepage                       //hash
-            Account currentUser = APIController.GetAccount(id, form.Username.Text, form.Username.Text);
+            //pull for account object, start homepage
+            APIController.credentials = (form.Username.Text, form.Password.Text);
+            Account currentUser = APIController.GetAccount(id);
             if (currentUser == null) throw new Exception("account fetch failed");
 
             currentUser.Password = form.Password.Text;

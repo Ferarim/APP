@@ -28,7 +28,7 @@ namespace FerarimTournaments.Login
 
         private void registerButton_Click(object sender, EventArgs e)
         {
-            register.AttemptRegister(loginForm, username.Text, firstName.Text, lastName.Text, password.Text);
+            register.AttemptRegister(loginForm, this, username.Text, firstName.Text, lastName.Text, password.Text);
         }
 
         private void loginButton_Click(object sender, EventArgs e)
