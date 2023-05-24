@@ -28,13 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.flowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
+            // 
+            // flowPanel
+            // 
+            this.flowPanel.AutoScroll = true;
+            this.flowPanel.Location = new System.Drawing.Point(12, 12);
+            this.flowPanel.Name = "flowPanel";
+            this.flowPanel.Size = new System.Drawing.Size(1116, 709);
+            this.flowPanel.TabIndex = 0;
             // 
             // TeammatesForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(43)))), ((int)(((byte)(84)))));
             this.ClientSize = new System.Drawing.Size(1140, 733);
+            this.Controls.Add(this.flowPanel);
             this.Name = "TeammatesForm";
             this.Text = "TeammatesForm";
             this.ResumeLayout(false);
@@ -42,5 +52,7 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.FlowLayoutPanel flowPanel;
     }
 }

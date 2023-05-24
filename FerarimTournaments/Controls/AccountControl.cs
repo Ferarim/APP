@@ -25,6 +25,8 @@ namespace FerarimTournaments.Controls
             CheckForAdmin();
         }
 
+        public Account AccountInstance { get => accountInstance; set => accountInstance = value; }
+
         public void InitItems()
         {
             this.usernameLabel.Text = accountInstance.UserName;

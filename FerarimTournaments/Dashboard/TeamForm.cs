@@ -17,6 +17,7 @@ namespace FerarimTournaments.Dashboard
     {
         private Account accountInstance;
         private HomeForm homeForm;
+        private Team teamInstance;
         public TeamForm(Account account, HomeForm homeForm)
         {
             InitializeComponent();
@@ -49,14 +50,14 @@ namespace FerarimTournaments.Dashboard
 
         public void InitItems()
         {
-            Team team = APIController.GetTeam(accountInstance.TeamId);
-            this.TeamNameLabel.Text = team.Name;
-            this.teamOwnerLabel.Text = team.OwnerName;
+            teamInstance = APIController.GetTeam(accountInstance.TeamId);
+            this.TeamNameLabel.Text = teamInstance.Name;
+            this.teamOwnerLabel.Text = teamInstance.OwnerName;
         }
 
         private void teammates_Click(object sender, EventArgs e)
         {
-            homeForm.OpenChildForm(new TeammatesForm());
+            homeForm.OpenChildForm(new TeammatesForm(teamInstance.Members));
         }
 
         private void teamSettings_Click(object sender, EventArgs e)
