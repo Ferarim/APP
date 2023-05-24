@@ -77,7 +77,7 @@ namespace FerarimTournaments.Logic
         }
 
         /// <summary>
-        /// Sends request to create team with the passed parameters. Returns true if successful.
+        /// Sends a request to create a team with the parameters passed. Returns true if successful.
         /// </summary>
         public static bool CreateTeam(string teamName, string teamPass)
         {
