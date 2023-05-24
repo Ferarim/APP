@@ -22,7 +22,7 @@ namespace FerarimTournaments.Dashboard
             InitializeComponent();
             this.accountInstance = account;
             this.homeForm = homeForm;
-            //TeamCheck();
+            TeamCheck();
             AdminCheck();
             
         }
@@ -51,7 +51,7 @@ namespace FerarimTournaments.Dashboard
         {
             Team team = APIController.GetTeam(accountInstance.TeamId);
             this.TeamNameLabel.Text = team.Name;
-            this.teamOwnerLabel.Text = team.Owner;
+            this.teamOwnerLabel.Text = team.OwnerName;
         }
 
         private void teammates_Click(object sender, EventArgs e)

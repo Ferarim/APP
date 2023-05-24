@@ -8,10 +8,10 @@ namespace FerarimTournaments.Objects
 {
     public class Team
     {
-        public string Name { get; private set; }
-        public string Password { get; private set; }
-        public string Owner { get; private set; }
-        public List<Account> Members { get; private set; }
+        public string Name { get;  set; }
+        public string Password { get;  set; }
+        public string OwnerName { get;  set; }
+        public List<Account> Members { get;  set; }
         public Team(string name, string password)
         {
             this.Name = name;
@@ -22,7 +22,7 @@ namespace FerarimTournaments.Objects
         {
             this.Name = name;
             this.Password = password;
-            this.Owner = owner;
+            this.OwnerName = owner;
             this.Members = members;
         }
 
