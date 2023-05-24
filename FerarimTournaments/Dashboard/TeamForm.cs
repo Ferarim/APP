@@ -31,7 +31,7 @@ namespace FerarimTournaments.Dashboard
         {
             if (accountInstance.Role == "ROLE_USER")
             {
-                teamSettings.Visible = false;
+                teamSettingsBtn.Visible = false;
             }
         }
 
@@ -66,8 +66,12 @@ namespace FerarimTournaments.Dashboard
 
         private void joinButton_Click(object sender, EventArgs e)
         {
-            string[] credentials = this.teamCodeBox.Text.Split(' ');
-            APIController.JoinTeam(credentials[0], credentials[1]);
+            if(String.IsNullOrEmpty(this.teamPassBox.Text) || String.IsNullOrEmpty(this.teamNameBox.Text))
+            {
+                return;
+            }
+
+            APIController.JoinTeam(this.teamNameBox.Text.Trim(), this.teamPassBox.Text.Trim());
         }
     }
 }
