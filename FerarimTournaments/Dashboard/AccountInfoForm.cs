@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FerarimTournaments.Logic;
 using FerarimTournaments.Objects;
 using FerarimTournaments.Tools;
 
@@ -23,7 +24,6 @@ namespace FerarimTournaments.Dashboard
             this.currentAccount = account;
             this.homeForm = homeForm;
             InitItems();
-            //InitTeamInfo();
         }
 
         public void InitItems()
@@ -31,12 +31,11 @@ namespace FerarimTournaments.Dashboard
             this.nameLabel.Text = currentAccount.FirstName;
             this.surnameLabel.Text = currentAccount.LastName;
             this.roleLabel.Text = currentAccount.Role;
-        }
 
-        public void InitTeamInfo()
-        {
-            //this.yourTeamLabel.Text = ;
-            //this.teamLogoPicture.Image = ;
+            if (currentAccount.TeamId != 0)
+            {
+                this.yourTeamLabel.Text = APIController.GetTeam(currentAccount.TeamId).Name;
+            }
         }
 
         private void yourTeamClick(object sender, EventArgs e)

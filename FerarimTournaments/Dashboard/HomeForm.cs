@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using FontAwesome.Sharp;
 using FerarimTournaments.Objects;
 using FerarimTournaments.Login;
+using FerarimTournaments.Logic;
 
 namespace FerarimTournaments.Dashboard
 {
@@ -28,13 +29,17 @@ namespace FerarimTournaments.Dashboard
             CURRENT_ACCOUNT_ROLE = account.Role;
 
             this.timer1.Start();
-            
+
+            InitItems();
         }
 
         public void InitItems()
         {
-            //this.yourTeamLabel.Text = get team name from API;
-            //this.teamLogoPicture.Image = get image fro API;
+            if(currentAccount.TeamId != 0)
+            {
+                this.yourTeamLabel.Text = APIController.GetTeam(currentAccount.TeamId).Name;
+            }
+
             InitUpcomingTournaments();
         }
 
