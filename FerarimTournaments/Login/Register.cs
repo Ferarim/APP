@@ -12,7 +12,8 @@ namespace FerarimTournaments.Login
     internal class Register
     {
         private Thread fetchThread;
-        private LoginForm form;
+        private LoginForm loginForm;
+        private RegisterForm registerForm;
         private readonly object _lock = new object();
 
         public string Username { get; private set; }
@@ -20,9 +21,10 @@ namespace FerarimTournaments.Login
         public string LastName { get; private set; }
         public string Password { get; private set; }
 
-        public void AttemptRegister(LoginForm form, string username, string firstname, string lastname, string password)
+        public void AttemptRegister(LoginForm loginForm, RegisterForm registerForm, string username, string firstname, string lastname, string password)
         {
-            this.form = form;
+            this.loginForm = loginForm;
+            this.registerForm = registerForm;
             Username = username;
             FirstName = firstname;
             LastName = lastname;
@@ -45,8 +47,11 @@ namespace FerarimTournaments.Login
                     //print error mb
                     return;
                 }
-                Action returnToLogin = delegate { form.BringToFront(); };
-                form.Invoke(returnToLogin);
+                Action returnToLogin = delegate {
+                    loginForm.Show();
+                    registerForm.Hide();
+                };
+                loginForm.Invoke(returnToLogin);
             }
         }
     }
