@@ -74,7 +74,6 @@
             this.notInTeamLabel.Size = new System.Drawing.Size(505, 52);
             this.notInTeamLabel.TabIndex = 6;
             this.notInTeamLabel.Text = "You are not in a team";
-            this.notInTeamLabel.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // teamPanel
             // 
@@ -86,7 +85,6 @@
             this.teamPanel.Name = "teamPanel";
             this.teamPanel.Size = new System.Drawing.Size(1136, 605);
             this.teamPanel.TabIndex = 8;
-            this.teamPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // teamSettings
             // 
@@ -101,6 +99,7 @@
             this.teamSettings.TabIndex = 11;
             this.teamSettings.Text = "TeamSettings";
             this.teamSettings.UseVisualStyleBackColor = false;
+            this.teamSettings.Click += new System.EventHandler(this.teamSettings_Click);
             // 
             // teammates
             // 
@@ -115,6 +114,7 @@
             this.teammates.TabIndex = 10;
             this.teammates.Text = "Teammates";
             this.teammates.UseVisualStyleBackColor = false;
+            this.teammates.Click += new System.EventHandler(this.teammates_Click);
             // 
             // teamOwnerLabel
             // 
@@ -137,7 +137,6 @@
             this.TeamNameLabel.Size = new System.Drawing.Size(421, 106);
             this.TeamNameLabel.TabIndex = 6;
             this.TeamNameLabel.Text = "TeamName";
-            this.TeamNameLabel.Click += new System.EventHandler(this.label1_Click_2);
             // 
             // joinButton
             // 
@@ -152,6 +151,7 @@
             this.joinButton.TabIndex = 9;
             this.joinButton.Text = "join";
             this.joinButton.UseVisualStyleBackColor = false;
+            this.joinButton.Click += new System.EventHandler(this.joinButton_Click);
             // 
             // TeamForm
             // 
@@ -166,7 +166,6 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "TeamForm";
             this.Text = "TeamForm";
-            this.Load += new System.EventHandler(this.TeamForm_Load);
             this.teamPanel.ResumeLayout(false);
             this.teamPanel.PerformLayout();
             this.ResumeLayout(false);

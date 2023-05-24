@@ -7,24 +7,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FerarimTournaments.Logic;
 using FerarimTournaments.Objects;
+using FerarimTournaments.Tools;
 
 namespace FerarimTournaments.Dashboard
 {
     public partial class TeamForm : Form
     {
-        private Account accountInstance;  
-        public TeamForm(Account account)
+        private Account accountInstance;
+        private HomeForm homeForm;
+        public TeamForm(Account account, HomeForm homeForm)
         {
             InitializeComponent();
             this.accountInstance = account;
+            this.homeForm = homeForm;
             TeamCheck();
             AdminCheck();
+            
         }
 
         public void AdminCheck()
         {
-            if (accountInstance.Role=="ROLE_USER")
+            if (accountInstance.Role == "ROLE_USER")
             {
                 teamSettings.Visible = false;
             }
@@ -32,35 +37,36 @@ namespace FerarimTournaments.Dashboard
 
         public void TeamCheck()
         {
-            if (true)
+            if (accountInstance.TeamId == 0)
             {
                 teamPanel.Visible = false;
             }
+            else
+            {
+                InitItems();
+            }
         }
 
-        private void TeamForm_Load(object sender, EventArgs e)
+        public void InitItems()
         {
-
+            Team team = APIController.GetTeam(accountInstance.TeamId);
+            this.TeamNameLabel.Text = team.Name;
+            this.teamOwnerLabel.Text = team.Owner;
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void teammates_Click(object sender, EventArgs e)
         {
-
+            homeForm.OpenChildForm(new TeammatesForm());
         }
 
-        private void label1_Click_1(object sender, EventArgs e)
+        private void teamSettings_Click(object sender, EventArgs e)
         {
-
+            homeForm.OpenChildForm(new TeamSettingsForm());
         }
 
-        private void label1_Click_2(object sender, EventArgs e)
+        private void joinButton_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
+            //do the math
         }
     }
 }
