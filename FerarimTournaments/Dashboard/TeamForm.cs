@@ -22,7 +22,7 @@ namespace FerarimTournaments.Dashboard
             InitializeComponent();
             this.accountInstance = account;
             this.homeForm = homeForm;
-            TeamCheck();
+            //TeamCheck();
             AdminCheck();
             
         }
@@ -66,7 +66,8 @@ namespace FerarimTournaments.Dashboard
 
         private void joinButton_Click(object sender, EventArgs e)
         {
-            //do the math
+            string[] credentials = this.teamCodeBox.Text.Split(' ');
+            APIController.JoinTeam(credentials[0], credentials[1]);
         }
     }
 }

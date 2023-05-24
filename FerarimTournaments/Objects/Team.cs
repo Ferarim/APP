@@ -26,5 +26,7 @@ namespace FerarimTournaments.Objects
             this.Members = members;
         }
 
+        public Team() { }
+
     }
 }
